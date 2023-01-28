@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
+		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
+		18FA497D29853F5400AB7587 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497C29853F5400AB7587 /* HomeRouter.swift */; };
+		18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498429853FF000AB7587 /* HomeInteractor.swift */; };
+		18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49882985410A00AB7587 /* RemoteDataSource.swift */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		18FA497C29853F5400AB7587 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		18FA498429853FF000AB7587 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		18FA49882985410A00AB7587 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				266344832983D0DF00C8F0E0 /* HomeViewController.swift */,
+				18FA497A29853CAA00AB7587 /* HomePresenter.swift */,
+				18FA497C29853F5400AB7587 /* HomeRouter.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -85,19 +95,69 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		182CF38F2984D06B00AA4142 /* Common */ = {
+		18FA497E29853F6C00AB7587 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				182CF3902984D07200AA4142 /* Views */,
+				18FA498129853FB600AB7587 /* Utils */,
+				18FA498029853F9800AB7587 /* Data */,
+				18FA497F29853F9200AB7587 /* Domain */,
 			);
-			path = Common;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		182CF3902984D07200AA4142 /* Views */ = {
+		18FA497F29853F9200AB7587 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				18FA498329853FD900AB7587 /* Use Case */,
+				18FA498229853FD300AB7587 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		18FA498029853F9800AB7587 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18FA4986298540F200AB7587 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		18FA498129853FB600AB7587 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18FA498229853FD300AB7587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18FA498329853FD900AB7587 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				18FA498429853FF000AB7587 /* HomeInteractor.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		18FA4986298540F200AB7587 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				18FA4987298540FC00AB7587 /* Response */,
+				18FA49882985410A00AB7587 /* RemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		18FA4987298540FC00AB7587 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		266344732983D0DF00C8F0E0 = {
@@ -122,7 +182,7 @@
 		2663447E2983D0DF00C8F0E0 /* AnimeApp */ = {
 			isa = PBXGroup;
 			children = (
-				182CF38F2984D06B00AA4142 /* Common */,
+				18FA497E29853F6C00AB7587 /* Core */,
 				182CF3882984CEAA00AA4142 /* Module */,
 				182CF3862984CE0100AA4142 /* App */,
 				182CF3852984CDEE00AA4142 /* Support File */,
@@ -280,9 +340,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
+				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
 				266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */,
 				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
 				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
+				18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */,
+				18FA497D29853F5400AB7587 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
