@@ -7,13 +7,18 @@
 
 import UIKit
 
-protocol HomeView: AnyObject {
-    func viewDidLoad()
-    func onItemDidPressed(indexPath: Int)
+protocol HomeViewProtocol: AnyObject {
+    func onLoading()
+    func onFetchDataSuccess()
+    func onFetchDataFailure()
 }
 
 class HomeViewController: UIViewController {
 
+    private lazy var presenter: HomePresenterProtocol = {
+        return Injection.shared.provideHomePresenter(with: self)
+    }()
+    
     private let tableAnime: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +37,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
     }
 
     private func setupView() {
@@ -71,12 +81,19 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: HomeView {
-    
-    func onItemDidPressed(indexPath: Int) {
-        print(indexPath)
+extension HomeViewController: HomeViewProtocol {
+    func onLoading() {
+        print("DEBUG: home view loading")
     }
     
+    func onFetchDataSuccess() {
+        print("DEBUG: home view success")
+    }
+    
+    func onFetchDataFailure() {
+        print("DEBUG: home view error")
+    }
+
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
