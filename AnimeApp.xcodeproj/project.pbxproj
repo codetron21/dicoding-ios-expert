@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +35,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182CF3852984CDEE00AA4142 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				266344882983D0E000C8F0E0 /* Assets.xcassets */,
+				2663448D2983D0E000C8F0E0 /* Info.plist */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		182CF3862984CE0100AA4142 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */,
+				266344812983D0DF00C8F0E0 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		182CF3882984CEAA00AA4142 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				182CF38A2984CF1C00AA4142 /* Splash */,
+				182CF3892984CEB300AA4142 /* Home */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		182CF3892984CEB300AA4142 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				266344832983D0DF00C8F0E0 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		182CF38A2984CF1C00AA4142 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		182CF38F2984D06B00AA4142 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				182CF3902984D07200AA4142 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		182CF3902984D07200AA4142 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		266344732983D0DF00C8F0E0 = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +112,10 @@
 		2663447E2983D0DF00C8F0E0 /* AnimeApp */ = {
 			isa = PBXGroup;
 			children = (
-				2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */,
-				266344812983D0DF00C8F0E0 /* SceneDelegate.swift */,
-				266344832983D0DF00C8F0E0 /* HomeViewController.swift */,
-				266344882983D0E000C8F0E0 /* Assets.xcassets */,
-				2663448D2983D0E000C8F0E0 /* Info.plist */,
+				182CF38F2984D06B00AA4142 /* Common */,
+				182CF3882984CEAA00AA4142 /* Module */,
+				182CF3862984CE0100AA4142 /* App */,
+				182CF3852984CDEE00AA4142 /* Support File */,
 			);
 			path = AnimeApp;
 			sourceTree = "<group>";
@@ -119,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */,
 				266344892983D0E000C8F0E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimeApp/Info.plist;
+				INFOPLIST_FILE = "AnimeApp/Support File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -275,7 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -287,7 +347,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimeApp/Info.plist;
+				INFOPLIST_FILE = "AnimeApp/Support File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -301,7 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
