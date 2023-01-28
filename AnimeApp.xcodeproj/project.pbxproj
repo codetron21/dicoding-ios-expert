@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
+		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
 		266344892983D0E000C8F0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266344882983D0E000C8F0E0 /* Assets.xcassets */; };
+		E3D60A66CCD931449F704D83 /* Pods_AnimeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6EFFA07CDA524F60B7A832F /* Pods_AnimeApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		266344832983D0DF00C8F0E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		266344882983D0E000C8F0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2663448D2983D0E000C8F0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5252EC54C5A4CE4A8A59A064 /* Pods-AnimeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeApp.debug.xcconfig"; path = "Target Support Files/Pods-AnimeApp/Pods-AnimeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5DB4B20BEFA74E1B61DA4DCF /* Pods-AnimeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimeApp.release.xcconfig"; path = "Target Support Files/Pods-AnimeApp/Pods-AnimeApp.release.xcconfig"; sourceTree = "<group>"; };
+		F6EFFA07CDA524F60B7A832F /* Pods_AnimeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D60A66CCD931449F704D83 /* Pods_AnimeApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,8 +103,11 @@
 		266344732983D0DF00C8F0E0 = {
 			isa = PBXGroup;
 			children = (
+				182CF3942984D33400AA4142 /* .swiftlint.yml */,
 				2663447E2983D0DF00C8F0E0 /* AnimeApp */,
 				2663447D2983D0DF00C8F0E0 /* Products */,
+				E5021784549A92A955EABB18 /* Pods */,
+				303CD22D1785C624D0E1B82D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +130,23 @@
 			path = AnimeApp;
 			sourceTree = "<group>";
 		};
+		303CD22D1785C624D0E1B82D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6EFFA07CDA524F60B7A832F /* Pods_AnimeApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5021784549A92A955EABB18 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5252EC54C5A4CE4A8A59A064 /* Pods-AnimeApp.debug.xcconfig */,
+				5DB4B20BEFA74E1B61DA4DCF /* Pods-AnimeApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +154,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 266344902983D0E000C8F0E0 /* Build configuration list for PBXNativeTarget "AnimeApp" */;
 			buildPhases = (
+				7CAAE386BF0FB45ED49BE487 /* [CP] Check Pods Manifest.lock */,
 				266344782983D0DF00C8F0E0 /* Sources */,
 				266344792983D0DF00C8F0E0 /* Frameworks */,
 				2663447A2983D0DF00C8F0E0 /* Resources */,
+				1D9F1B290D03B90C6657820E /* [CP] Embed Pods Frameworks */,
+				182CF3932984D2EE00AA4142 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -178,12 +208,72 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */,
 				182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */,
 				266344892983D0E000C8F0E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		182CF3932984D2EE00AA4142 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint \nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
+		1D9F1B290D03B90C6657820E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CAAE386BF0FB45ED49BE487 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimeApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		266344782983D0DF00C8F0E0 /* Sources */ = {
@@ -315,6 +405,7 @@
 		};
 		266344912983D0E000C8F0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5252EC54C5A4CE4A8A59A064 /* Pods-AnimeApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,6 +432,7 @@
 		};
 		266344922983D0E000C8F0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DB4B20BEFA74E1B61DA4DCF /* Pods-AnimeApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
