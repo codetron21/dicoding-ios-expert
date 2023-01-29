@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class Injection {
     
@@ -23,9 +24,17 @@ final class Injection {
         return HomeInteractor(repository: repository)
     }
     
-    func provideHomePresenter(with view: HomeViewProtocol) -> HomePresenterProtocol {
+    func provideAppRouter(with uiVc: UIViewController? = nil) -> AppRouterProtocol {
+        if let uiVc = uiVc {
+            return AppRouter.sharedInstance(uiVc)
+        } else {
+            return AppRouter.shared
+        }
+    }
+    
+    func provideHomePresenter(with view: HomeViewProtocol, appRouter: AppRouterProtocol) -> HomePresenterProtocol {
         let useCase = provideHomeUseCase()
-        return HomePresenter(useCase: useCase, view: view)
+        return HomePresenter(useCase: useCase, view: view, router: appRouter)
     }
     
 }

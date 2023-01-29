@@ -10,7 +10,6 @@
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
 		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
-		18FA497D29853F5400AB7587 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497C29853F5400AB7587 /* HomeRouter.swift */; };
 		18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498429853FF000AB7587 /* HomeInteractor.swift */; };
 		18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49882985410A00AB7587 /* RemoteDataSource.swift */; };
 		18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498A298546A500AB7587 /* ListAnimeResponse.swift */; };
@@ -23,6 +22,12 @@
 		18FA499E2985601900AB7587 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499D2985601900AB7587 /* Injection.swift */; };
 		18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */; };
 		18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */; };
+		18FA49A82986224200AB7587 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49A72986224200AB7587 /* AboutViewController.swift */; };
+		18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49AE2986253D00AB7587 /* AppRouter.swift */; };
+		18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */; };
+		18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */; };
+		18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */; };
+		18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B72986330400AB7587 /* DetailViewController.swift */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
@@ -34,7 +39,6 @@
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		18FA497C29853F5400AB7587 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		18FA498429853FF000AB7587 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		18FA49882985410A00AB7587 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		18FA498A298546A500AB7587 /* ListAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAnimeResponse.swift; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		18FA499D2985601900AB7587 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeItemCell.swift; sourceTree = "<group>"; };
+		18FA49A72986224200AB7587 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		18FA49AE2986253D00AB7587 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
+		18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModuleBuilder.swift; sourceTree = "<group>"; };
+		18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		18FA49B72986330400AB7587 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +101,9 @@
 		182CF3882984CEAA00AA4142 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				18FA49B6298632F300AB7587 /* Detail */,
+				18FA49A62986221C00AB7587 /* Favorite */,
+				18FA49A52986221500AB7587 /* About */,
 				182CF38A2984CF1C00AA4142 /* Splash */,
 				182CF3892984CEB300AA4142 /* Home */,
 			);
@@ -102,7 +115,7 @@
 			children = (
 				266344832983D0DF00C8F0E0 /* HomeViewController.swift */,
 				18FA497A29853CAA00AB7587 /* HomePresenter.swift */,
-				18FA497C29853F5400AB7587 /* HomeRouter.swift */,
+				18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,6 +243,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		18FA49A52986221500AB7587 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				18FA49A72986224200AB7587 /* AboutViewController.swift */,
+				18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		18FA49A62986221C00AB7587 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		18FA49AD2986252700AB7587 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				18FA49AE2986253D00AB7587 /* AppRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		18FA49B6298632F300AB7587 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				18FA49B72986330400AB7587 /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		266344732983D0DF00C8F0E0 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +298,7 @@
 		2663447E2983D0DF00C8F0E0 /* AnimeApp */ = {
 			isa = PBXGroup;
 			children = (
+				18FA49AD2986252700AB7587 /* Router */,
 				18FA497E29853F6C00AB7587 /* Core */,
 				182CF3882984CEAA00AA4142 /* Module */,
 				182CF3862984CE0100AA4142 /* App */,
@@ -417,16 +464,21 @@
 				18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */,
 				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
 				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
+				18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */,
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
 				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
+				18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */,
+				18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */,
 				18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */,
+				18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */,
 				18FA498D2985475B00AB7587 /* GeneralResponse.swift in Sources */,
 				266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */,
+				18FA49A82986224200AB7587 /* AboutViewController.swift in Sources */,
 				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
+				18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */,
 				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
 				18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */,
 				18FA4995298556BE00AB7587 /* AnimeRepository.swift in Sources */,
-				18FA497D29853F5400AB7587 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

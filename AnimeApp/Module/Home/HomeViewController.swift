@@ -14,9 +14,12 @@ protocol HomeViewProtocol: AnyObject {
 }
 
 class HomeViewController: UIViewController {
-
+    
     private lazy var presenter: HomePresenterProtocol = {
-        return Injection.shared.provideHomePresenter(with: self)
+        let appRouter = Injection.shared.provideAppRouter(with: self)
+        return Injection.shared.provideHomePresenter(
+            with: self,
+            appRouter: appRouter)
     }()
     
     private let tableAnime: UITableView = {
@@ -57,12 +60,16 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         presenter.viewWillAppear()
     }
-
+    
     private func setupView() {
         view.backgroundColor = .systemCyan
         
         title = "Home"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let aboutItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(actionAboutDidPressed))
+        
+        navigationItem.rightBarButtonItem = aboutItem
         
         setupTable()
         setupLoading()
@@ -102,7 +109,7 @@ class HomeViewController: UIViewController {
     
     private func setupError() {
         view.addSubview(errorLabel)
-
+        
         let constraint = [
             errorLabel.centerXAnchor.constraint(equalTo: tableAnime.centerXAnchor),
             errorLabel.centerYAnchor.constraint(equalTo: tableAnime.centerYAnchor)
@@ -110,7 +117,7 @@ class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate(constraint)
     }
-
+    
 }
 
 extension HomeViewController: HomeViewProtocol {
@@ -133,7 +140,15 @@ extension HomeViewController: HomeViewProtocol {
         errorLabel.isHidden = false
         errorLabel.text = "Error occurred with message:\n\(message)"
     }
+    
+}
 
+extension HomeViewController {
+    
+    @objc func actionAboutDidPressed() {
+        presenter.onAboutIconDidSelected()
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -146,7 +161,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.data.count
     }
-     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimeItemCell.id, for: indexPath) as? AnimeItemCell else { return UITableViewCell() }
         cell.anime = presenter.data[indexPath.row]
