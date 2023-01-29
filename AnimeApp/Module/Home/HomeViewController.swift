@@ -9,8 +9,8 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     func onLoading()
-    func onFetchDataSuccess()
-    func onFetchDataFailure()
+    func onFetchDataSuccess(data: [ItemAnimeModel])
+    func onFetchDataFailure(message: String)
 }
 
 class HomeViewController: UIViewController {
@@ -29,6 +29,20 @@ class HomeViewController: UIViewController {
         let label = UILabel()
         label.text = "Loading..."
         label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.isHidden = true
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let errorLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = UIColor.systemRed
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.isHidden = true
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -46,14 +60,18 @@ class HomeViewController: UIViewController {
 
     private func setupView() {
         view.backgroundColor = .systemCyan
-        view.addSubview(tableAnime)
-        view.addSubview(loadingLabel)
+        
+        title = "Home"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         setupTable()
         setupLoading()
+        setupError()
     }
     
     private func setupLoading() {
+        view.addSubview(loadingLabel)
+        
         let constraint = [
             loadingLabel.centerXAnchor.constraint(equalTo: tableAnime.centerXAnchor),
             loadingLabel.centerYAnchor.constraint(equalTo: tableAnime.centerYAnchor)
@@ -63,8 +81,11 @@ class HomeViewController: UIViewController {
     }
     
     private func setupTable() {
+        view.addSubview(tableAnime)
+        
         tableAnime.backgroundColor = UIColor.white
-        tableAnime.register(UITableViewCell.self, forCellReuseIdentifier: "id")
+        tableAnime.register(AnimeItemCell.self, forCellReuseIdentifier: AnimeItemCell.id)
+        tableAnime.rowHeight = AnimeItemCell.rowHeight
         tableAnime.delegate = self
         tableAnime.dataSource = self
         
@@ -78,20 +99,39 @@ class HomeViewController: UIViewController {
         
         NSLayoutConstraint.activate(constraint)
     }
+    
+    private func setupError() {
+        view.addSubview(errorLabel)
+
+        let constraint = [
+            errorLabel.centerXAnchor.constraint(equalTo: tableAnime.centerXAnchor),
+            errorLabel.centerYAnchor.constraint(equalTo: tableAnime.centerYAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(constraint)
+    }
 
 }
 
 extension HomeViewController: HomeViewProtocol {
     func onLoading() {
         print("DEBUG: home view loading")
+        loadingLabel.isHidden = false
+        errorLabel.isHidden = true
     }
     
-    func onFetchDataSuccess() {
+    func onFetchDataSuccess(data: [ItemAnimeModel]) {
         print("DEBUG: home view success")
+        loadingLabel.isHidden = true
+        errorLabel.isHidden = true
+        tableAnime.reloadData()
     }
     
-    func onFetchDataFailure() {
+    func onFetchDataFailure(message: String) {
         print("DEBUG: home view error")
+        loadingLabel.isHidden = true
+        errorLabel.isHidden = false
+        errorLabel.text = "Error occurred with message:\n\(message)"
     }
 
 }
@@ -99,15 +139,17 @@ extension HomeViewController: HomeViewProtocol {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter.onItemDidSelected(at: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        return presenter.data.count
     }
-    
+     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimeItemCell.id, for: indexPath) as? AnimeItemCell else { return UITableViewCell() }
+        cell.anime = presenter.data[indexPath.row]
         return cell
     }
     

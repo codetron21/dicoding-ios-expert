@@ -21,6 +21,8 @@
 		18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA4996298557D100AB7587 /* ItemAnimeModel.swift */; };
 		18FA499A2985583200AB7587 /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49992985583200AB7587 /* AnimeMapper.swift */; };
 		18FA499E2985601900AB7587 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499D2985601900AB7587 /* Injection.swift */; };
+		18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */; };
+		18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
@@ -43,6 +45,8 @@
 		18FA4996298557D100AB7587 /* ItemAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAnimeModel.swift; sourceTree = "<group>"; };
 		18FA49992985583200AB7587 /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
 		18FA499D2985601900AB7587 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeItemCell.swift; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		18FA498129853FB600AB7587 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				18FA49A22985F7BB00AB7587 /* View */,
 				18FA49982985582000AB7587 /* Mapper */,
 				18FA49912985547800AB7587 /* Extension */,
 				18FA498E298551F900AB7587 /* Network */,
@@ -180,6 +185,7 @@
 			children = (
 				18FA498A298546A500AB7587 /* ListAnimeResponse.swift */,
 				18FA498C2985475B00AB7587 /* GeneralResponse.swift */,
+				18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -214,6 +220,14 @@
 				18FA499D2985601900AB7587 /* Injection.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		18FA49A22985F7BB00AB7587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		266344732983D0DF00C8F0E0 = {
@@ -397,12 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18FA499E2985601900AB7587 /* Injection.swift in Sources */,
+				18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */,
 				18FA499A2985583200AB7587 /* AnimeMapper.swift in Sources */,
 				18FA49902985520800AB7587 /* ApiCall.swift in Sources */,
 				18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */,
 				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
 				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
+				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
 				18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */,
 				18FA498D2985475B00AB7587 /* GeneralResponse.swift in Sources */,
 				266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */,

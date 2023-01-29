@@ -21,7 +21,7 @@ struct JpgResponse: Codable {
     var imageUrl: String?
     
     enum CodingKeys: String, CodingKey {
-        case imageUrl = "small_image_url"
+        case imageUrl = "image_url"
     }
 }
 

@@ -30,18 +30,33 @@ final class RemoteDataSource: RemoteDataSourceProtocol {
             }
             
             AF.request(url)
-                .validate()
                 .responseDecodable(of: ListAnimeResponse.self) { response in
                     switch response.result {
                     case .success(let value):
+                        print("DEBUG: remote result \(value.data)")
                         observer.onNext(value.data)
                         observer.onCompleted()
                     case .failure:
-                        observer.onError(URLError.invalidResponse)
+                        if let data = response.data {
+                            let errMessage = self.decodeError(data)
+                            print("DEBUG: remote result \(errMessage)")
+                            observer.onError(URLError.errorResponse(errMessage))
+                        } else {
+                            observer.onError(URLError.invalidResponse)
+                        }
                     }
                 }
             
             return Disposables.create()
+        }
+    }
+    
+    private func decodeError(_ data: Data) -> String {
+        let decoder = JSONDecoder()
+        if let result = try? decoder.decode(ErrorResponse.self, from: data) {
+            return result.message ?? "Fail to decode response"
+        } else {
+            return "Something gone wrong"
         }
     }
 }
