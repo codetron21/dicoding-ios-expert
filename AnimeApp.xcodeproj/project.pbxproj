@@ -28,6 +28,9 @@
 		18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */; };
 		18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */; };
 		18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B72986330400AB7587 /* DetailViewController.swift */; };
+		18FA49BA2986360200AB7587 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B92986360200AB7587 /* FavoritePresenter.swift */; };
+		18FA49BC2986360E00AB7587 /* FavoriteModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */; };
+		18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49BD2986368E00AB7587 /* DetailPresenter.swift */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
@@ -57,6 +60,9 @@
 		18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModuleBuilder.swift; sourceTree = "<group>"; };
 		18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		18FA49B72986330400AB7587 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		18FA49B92986360200AB7587 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
+		18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModuleBuilder.swift; sourceTree = "<group>"; };
+		18FA49BD2986368E00AB7587 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */,
+				18FA49B92986360200AB7587 /* FavoritePresenter.swift */,
+				18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				18FA49B72986330400AB7587 /* DetailViewController.swift */,
+				18FA49BD2986368E00AB7587 /* DetailPresenter.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -460,10 +469,12 @@
 				18FA499E2985601900AB7587 /* Injection.swift in Sources */,
 				18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */,
 				18FA499A2985583200AB7587 /* AnimeMapper.swift in Sources */,
+				18FA49BC2986360E00AB7587 /* FavoriteModuleBuilder.swift in Sources */,
 				18FA49902985520800AB7587 /* ApiCall.swift in Sources */,
 				18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */,
 				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
 				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
+				18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */,
 				18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */,
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
 				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
@@ -479,6 +490,7 @@
 				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
 				18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */,
 				18FA4995298556BE00AB7587 /* AnimeRepository.swift in Sources */,
+				18FA49BA2986360200AB7587 /* FavoritePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

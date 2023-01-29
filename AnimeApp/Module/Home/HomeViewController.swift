@@ -8,9 +8,9 @@
 import UIKit
 
 protocol HomeViewProtocol: AnyObject {
-    func onLoading()
-    func onFetchDataSuccess(data: [ItemAnimeModel])
-    func onFetchDataFailure(message: String)
+    func onLoadingState()
+    func onBindSuccessState(data: [ItemAnimeModel])
+    func onBindFailureState(message: String)
 }
 
 class HomeViewController: UIViewController {
@@ -68,8 +68,12 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         let aboutItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(actionAboutDidPressed))
+        let favoriteItem = UIBarButtonItem(image: UIImage(systemName: "heart.circle"), style: .plain, target: self, action: #selector(actionFavoriteDidPressed))
         
-        navigationItem.rightBarButtonItem = aboutItem
+        navigationItem.rightBarButtonItems = [
+            aboutItem,
+            favoriteItem
+        ]
         
         setupTable()
         setupLoading()
@@ -121,20 +125,20 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func onLoading() {
+    func onLoadingState() {
         print("DEBUG: home view loading")
         loadingLabel.isHidden = false
         errorLabel.isHidden = true
     }
     
-    func onFetchDataSuccess(data: [ItemAnimeModel]) {
+    func onBindSuccessState(data: [ItemAnimeModel]) {
         print("DEBUG: home view success")
         loadingLabel.isHidden = true
         errorLabel.isHidden = true
         tableAnime.reloadData()
     }
     
-    func onFetchDataFailure(message: String) {
+    func onBindFailureState(message: String) {
         print("DEBUG: home view error")
         loadingLabel.isHidden = true
         errorLabel.isHidden = false
@@ -146,7 +150,11 @@ extension HomeViewController: HomeViewProtocol {
 extension HomeViewController {
     
     @objc func actionAboutDidPressed() {
-        presenter.onAboutIconDidSelected()
+        presenter.onAboutDidPressed()
+    }
+    
+    @objc func actionFavoriteDidPressed() {
+        presenter.onFavoriteDidPressed()
     }
     
 }

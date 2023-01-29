@@ -12,7 +12,8 @@ protocol HomePresenterProtocol: AnyObject {
     var data: [ItemAnimeModel] { get }
     func viewWillAppear()
     func onItemDidSelected(at index: Int)
-    func onAboutIconDidSelected()
+    func onAboutDidPressed()
+    func onFavoriteDidPressed()
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -33,27 +34,33 @@ class HomePresenter: HomePresenterProtocol {
     func viewWillAppear() {
         if !data.isEmpty { return }
         
-        self.view?.onLoading()
+        self.view?.onLoadingState()
         useCase.getTopAnime()
             .observe(on: MainScheduler.instance)
             .subscribe { result in
                 self.data = result
-                self.view?.onFetchDataSuccess(data: self.data)
+                self.view?.onBindSuccessState(data: self.data)
             } onError: { error in
                 print("DEBUG: home presenter \(error.localizedDescription)")
                 let errMessage = error.localizedDescription
-                self.view?.onFetchDataFailure(message: errMessage)
+                self.view?.onBindFailureState(message: errMessage)
             }.disposed(by: disposeBag)
     }
     
     func onItemDidSelected(at index: Int) {
         let id = data[index].id
         print("DEBUG: home presenter item id \(id)")
+        router.navigateToDetail(with: id)
     }
     
-    func onAboutIconDidSelected() {
+    func onAboutDidPressed() {
         print("DEBUG: home presenter about")
         router.navigateToAbout()
+    }
+    
+    func onFavoriteDidPressed() {
+        print("DEBUG: home presenter favorite")
+        router.navigateToFavorite()
     }
     
 }

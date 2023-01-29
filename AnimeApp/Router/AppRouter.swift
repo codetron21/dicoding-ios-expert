@@ -51,6 +51,7 @@ extension AppRouter: AppRouterProtocol {
     
     func navigateToFavorite() {
         print("DEBUG: route favorite")
+        uiVc?.navigationController?.pushViewController(FavoriteModuleBuilder.build(), animated: true)
     }
     
     
