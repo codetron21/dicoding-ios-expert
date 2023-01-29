@@ -77,7 +77,7 @@ class HomeViewController: UIViewController {
         
         setupTable()
         setupLoading()
-        setupError()
+        setupErrorLabel()
     }
     
     private func setupLoading() {
@@ -111,7 +111,7 @@ class HomeViewController: UIViewController {
         NSLayoutConstraint.activate(constraint)
     }
     
-    private func setupError() {
+    private func setupErrorLabel() {
         view.addSubview(errorLabel)
         
         let constraint = [

@@ -24,6 +24,11 @@ final class Injection {
         return HomeInteractor(repository: repository)
     }
     
+    private func provideDetailUseCase() -> DetailUseCase {
+        let repository = provideRepository()
+        return DetailInteractor(repository: repository)
+    }
+    
     func provideAppRouter(with uiVc: UIViewController? = nil) -> AppRouterProtocol {
         if let uiVc = uiVc {
             return AppRouter.sharedInstance(uiVc)
@@ -35,6 +40,11 @@ final class Injection {
     func provideHomePresenter(with view: HomeViewProtocol, appRouter: AppRouterProtocol) -> HomePresenterProtocol {
         let useCase = provideHomeUseCase()
         return HomePresenter(useCase: useCase, view: view, router: appRouter)
+    }
+    
+    func provideDetailPresenter(with view: DetailViewProtocol) -> DetailPresenterProtocol {
+        let useCase = provideDetailUseCase()
+        return DetailPresenter(useCase: useCase, view: view)
     }
     
 }

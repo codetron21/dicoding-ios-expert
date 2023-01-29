@@ -32,7 +32,7 @@ class AppRouter {
     private init(_ uiVc: UIViewController) {
         self.uiVc = uiVc
     }
-        
+    
 }
 
 extension AppRouter: AppRouterProtocol {
@@ -42,6 +42,7 @@ extension AppRouter: AppRouterProtocol {
     
     func navigateToDetail(with id: Int) {
         print("DEBUG: route detail id \(id)")
+        uiVc?.navigationController?.pushViewController(DetailModuleBuilder.build(id: id), animated: true)
     }
     
     func navigateToAbout() {

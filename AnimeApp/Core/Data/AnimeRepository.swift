@@ -10,6 +10,7 @@ import RxSwift
 
 protocol AnimeRepositoryProtocol: AnyObject {
     func getTopAnime() -> Observable<[ItemAnimeModel]>
+    func getDetailAnime(id: Int) -> Single<DetailAnimeModel>
 }
 
 final class AnimeRepository {
@@ -33,6 +34,10 @@ extension AnimeRepository: AnimeRepositoryProtocol {
     func getTopAnime() -> Observable<[ItemAnimeModel]> {
         return self.remote.getTopAnime()
             .map { AnimeMapper.mapAnimeResponseToDomains(input: $0) }
+    }
+    
+    func getDetailAnime(id: Int) -> Single<DetailAnimeModel> {
+        return self.remote.getDetailAnime(id: id).map { AnimeMapper.mapAnimeResponseToDomain(input: $0) }
     }
     
 }

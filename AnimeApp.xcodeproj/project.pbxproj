@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18161F47298686DB00384C68 /* DetailAnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F46298686DB00384C68 /* DetailAnimeResponse.swift */; };
+		18161F49298692B800384C68 /* DetailAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F48298692B800384C68 /* DetailAnimeModel.swift */; };
+		18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4A2986947500384C68 /* DetailInteractor.swift */; };
+		18161F4D2986955500384C68 /* DetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4C2986955500384C68 /* DetailModuleBuilder.swift */; };
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
 		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
@@ -39,6 +43,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18161F46298686DB00384C68 /* DetailAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeResponse.swift; sourceTree = "<group>"; };
+		18161F48298692B800384C68 /* DetailAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeModel.swift; sourceTree = "<group>"; };
+		18161F4A2986947500384C68 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		18161F4C2986955500384C68 /* DetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleBuilder.swift; sourceTree = "<group>"; };
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -86,6 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18161F442986802C00384C68 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				18161F452986803200384C68 /* Entity */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		18161F452986803200384C68 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		182CF3852984CDEE00AA4142 /* Support File */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +180,7 @@
 		18FA498029853F9800AB7587 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				18161F442986802C00384C68 /* Locale */,
 				18FA4986298540F200AB7587 /* Remote */,
 				18FA4994298556BE00AB7587 /* AnimeRepository.swift */,
 			);
@@ -178,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				18FA4996298557D100AB7587 /* ItemAnimeModel.swift */,
+				18161F48298692B800384C68 /* DetailAnimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				18FA498429853FF000AB7587 /* HomeInteractor.swift */,
+				18161F4A2986947500384C68 /* DetailInteractor.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -205,6 +231,7 @@
 				18FA498A298546A500AB7587 /* ListAnimeResponse.swift */,
 				18FA498C2985475B00AB7587 /* GeneralResponse.swift */,
 				18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */,
+				18161F46298686DB00384C68 /* DetailAnimeResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -281,6 +308,7 @@
 			children = (
 				18FA49B72986330400AB7587 /* DetailViewController.swift */,
 				18FA49BD2986368E00AB7587 /* DetailPresenter.swift */,
+				18161F4C2986955500384C68 /* DetailModuleBuilder.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -477,13 +505,17 @@
 				18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */,
 				18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */,
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
+				18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */,
 				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
 				18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */,
 				18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */,
 				18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */,
 				18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */,
 				18FA498D2985475B00AB7587 /* GeneralResponse.swift in Sources */,
+				18161F4D2986955500384C68 /* DetailModuleBuilder.swift in Sources */,
 				266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */,
+				18161F49298692B800384C68 /* DetailAnimeModel.swift in Sources */,
+				18161F47298686DB00384C68 /* DetailAnimeResponse.swift in Sources */,
 				18FA49A82986224200AB7587 /* AboutViewController.swift in Sources */,
 				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
 				18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */,
@@ -623,8 +655,8 @@
 				INFOPLIST_FILE = "AnimeApp/Support File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,8 +682,8 @@
 				INFOPLIST_FILE = "AnimeApp/Support File/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

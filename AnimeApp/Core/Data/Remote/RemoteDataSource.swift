@@ -30,11 +30,12 @@ final class RemoteDataSource: RemoteDataSourceProtocol {
             }
             
             AF.request(url)
-                .responseDecodable(of: ListAnimeResponse.self) { response in
+                .responseDecodable(of: WrapperResponse<[ItemAnimeResponse]>.self) { response in
                     switch response.result {
                     case .success(let value):
-                        print("DEBUG: remote result \(value.data)")
-                        observer.onNext(value.data)
+                        let data = value.data ?? []
+                        print("DEBUG: remote result \(data)")
+                        observer.onNext(data)
                         observer.onCompleted()
                     case .failure:
                         if let data = response.data {
@@ -51,10 +52,45 @@ final class RemoteDataSource: RemoteDataSourceProtocol {
         }
     }
     
+    func getDetailAnime(id: Int) -> Single<DetailAnimeResponse> {
+        return Single<DetailAnimeResponse>.create { observer in
+            let url = URL(string: Endpoints.Gets.detail(id).url)
+            
+            guard let url = url else {
+                print("ERROR: remote url")
+                observer(.failure(URLError.invalidAddress))
+                return Disposables.create()
+            }
+            
+            AF.request(url)
+                .responseDecodable(of: WrapperResponse<DetailAnimeResponse>.self) {response in
+                    switch response.result {
+                    case .success(let value):
+                        if let data = value.data {
+                            print("DEBUG: remote result \(data)")
+                            observer(.success(data))
+                        } else {
+                            observer(.failure(URLError.invalidResponse))
+                        }
+                    case .failure:
+                        if let data = response.data {
+                            let errMessage = self.decodeError(data)
+                            print("DEBUG: remote result \(errMessage)")
+                            observer(.failure(URLError.errorResponse(errMessage)))
+                        } else {
+                            observer(.failure(URLError.invalidResponse))
+                        }
+                    }
+                }
+            
+            return Disposables.create()
+        }
+    }
+    
     private func decodeError(_ data: Data) -> String {
         let decoder = JSONDecoder()
         if let result = try? decoder.decode(ErrorResponse.self, from: data) {
-            return result.message ?? "Fail to decode response"
+            return result.message ?? "Failed to decode response"
         } else {
             return "Something gone wrong"
         }

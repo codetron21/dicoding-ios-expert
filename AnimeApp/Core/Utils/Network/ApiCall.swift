@@ -23,10 +23,12 @@ enum Endpoints {
   
   enum Gets: Endpoint {
     case top
+    case detail(Int)
     
     public var url: String {
       switch self {
       case .top: return "\(API.baseUrl)top/anime"
+      case .detail(let id): return "\(API.baseUrl)anime/\(id)"
       }
     }
   }

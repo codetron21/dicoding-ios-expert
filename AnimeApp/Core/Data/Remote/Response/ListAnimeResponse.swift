@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct ListAnimeResponse: Codable {
-    var data: [ItemAnimeResponse]
-    
-    enum CodingKeys: String, CodingKey {
-        case data
-    }
-}
-
 struct ItemAnimeResponse: Codable {
     var id: Int?
     var titles: [TitleResponse]

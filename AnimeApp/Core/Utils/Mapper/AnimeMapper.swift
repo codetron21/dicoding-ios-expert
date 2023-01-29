@@ -31,4 +31,10 @@ final class AnimeMapper {
         }
     }
     
+    static func mapAnimeResponseToDomain(
+        input: DetailAnimeResponse
+    ) -> DetailAnimeModel {
+        return DetailAnimeModel(id: input.id ?? -1, title: input.title ?? "Unknown", type: input.type ?? "Unknown", status: input.status ?? "Unknown", episodes: input.episodes ?? 0, description: input.description ?? "Unknown", imageUrl: input.images?.jpg?.imageUrl ?? "")
+    }
+    
 }

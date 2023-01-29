@@ -7,6 +7,15 @@
 
 import Foundation
 
+// MARK: - Base / wrapper response
+struct WrapperResponse<T: Codable>: Codable {
+    var data: T?
+    
+    enum CodingKeys: String, CodingKey {
+        case data
+    }
+}
+
 // MARK: - Image anime responses
 
 struct ImagesResponse: Codable {
