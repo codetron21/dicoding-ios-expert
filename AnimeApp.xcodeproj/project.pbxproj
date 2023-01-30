@@ -11,6 +11,8 @@
 		18161F49298692B800384C68 /* DetailAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F48298692B800384C68 /* DetailAnimeModel.swift */; };
 		18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4A2986947500384C68 /* DetailInteractor.swift */; };
 		18161F4D2986955500384C68 /* DetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4C2986955500384C68 /* DetailModuleBuilder.swift */; };
+		181920F9298779EF00D0A8B0 /* AnimeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920F8298779EF00D0A8B0 /* AnimeEntity.swift */; };
+		181920FB29877AF300D0A8B0 /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */; };
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
 		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
@@ -47,6 +49,8 @@
 		18161F48298692B800384C68 /* DetailAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeModel.swift; sourceTree = "<group>"; };
 		18161F4A2986947500384C68 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		18161F4C2986955500384C68 /* DetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleBuilder.swift; sourceTree = "<group>"; };
+		181920F8298779EF00D0A8B0 /* AnimeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeEntity.swift; sourceTree = "<group>"; };
+		181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				18161F452986803200384C68 /* Entity */,
+				181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */,
 			);
 			path = Locale;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		18161F452986803200384C68 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				181920F8298779EF00D0A8B0 /* AnimeEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
 				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
 				18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */,
+				181920F9298779EF00D0A8B0 /* AnimeEntity.swift in Sources */,
 				18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */,
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
 				18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */,
@@ -520,6 +527,7 @@
 				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
 				18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */,
 				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
+				181920FB29877AF300D0A8B0 /* LocaleDataSource.swift in Sources */,
 				18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */,
 				18FA4995298556BE00AB7587 /* AnimeRepository.swift in Sources */,
 				18FA49BA2986360200AB7587 /* FavoritePresenter.swift in Sources */,
