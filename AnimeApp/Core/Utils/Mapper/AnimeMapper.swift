@@ -37,4 +37,28 @@ final class AnimeMapper {
         return DetailAnimeModel(id: input.id ?? -1, title: input.title ?? "Unknown", type: input.type ?? "Unknown", status: input.status ?? "Unknown", episodes: input.episodes ?? 0, description: input.description ?? "Unknown", imageUrl: input.images?.jpg?.imageUrl ?? "")
     }
     
+    static func mapAnimeDomainToEntity(
+        input: DetailAnimeModel
+    ) -> AnimeEntity {
+        let entity = AnimeEntity()
+        
+        entity.id = input.id
+        entity.title = input.title
+        entity.type = input.type
+        entity.status = input.status
+        entity.episodes = input.episodes
+        entity.imageUrl = input.imageUrl
+        entity.synopsis = input.imageUrl
+        
+        return entity
+    }
+    
+    static func mapAnimeEntityToDomain(
+        input: [AnimeEntity]
+    ) -> [ItemAnimeModel] {
+        return input.map { result in
+            return ItemAnimeModel(id: result.id, title: result.title, imageUrl: result.imageUrl)
+        }
+    }
+    
 }

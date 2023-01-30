@@ -24,8 +24,8 @@ final class LocaleDataSource {
         self.realm = realm
     }
     
-    static let sharedInstance: (Realm?) -> LocaleDataSource = {
-        realmDatabase in return LocaleDataSource(realm: realmDatabase)
+    static let sharedInstance: (Realm?) -> LocaleDataSource = { realmDatabase in
+        return LocaleDataSource(realm: realmDatabase)
     }
     
 }

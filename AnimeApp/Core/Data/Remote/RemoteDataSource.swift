@@ -11,6 +11,7 @@ import RxSwift
 
 protocol RemoteDataSourceProtocol: AnyObject {
     func getTopAnime() -> Observable<[ItemAnimeResponse]>
+    func getDetailAnime(id: Int) -> Single<DetailAnimeResponse>
 }
 
 final class RemoteDataSource: RemoteDataSourceProtocol {

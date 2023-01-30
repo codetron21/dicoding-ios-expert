@@ -12,6 +12,7 @@ protocol DetailViewProtocol: AnyObject {
     func onLoadingState()
     func onBindSuccessState(data: DetailAnimeModel)
     func onBindFailureState(message: String)
+    func onFavoriteState(isFavorite: Bool)
 }
 
 class DetailViewController: UIViewController {
@@ -210,7 +211,7 @@ class DetailViewController: UIViewController {
             image: UIImage(systemName: isFavorite ? "heart.fill" : "heart"),
             style: .done,
             target: self,
-            action: nil
+            action: #selector(actionFavoriteDidPressed)
         )
         
         navigationItem.rightBarButtonItem = favoriteItem
@@ -227,6 +228,7 @@ extension DetailViewController: DetailViewProtocol {
         posterImage.isHidden = true
         stackTitle.isHidden = true
         stackDescription.isHidden = true
+        navigationItem.rightBarButtonItem?.isHidden = true
     }
     
     func onBindSuccessState(data: DetailAnimeModel) {
@@ -236,6 +238,7 @@ extension DetailViewController: DetailViewProtocol {
         posterImage.isHidden = false
         stackTitle.isHidden = false
         stackDescription.isHidden = false
+        navigationItem.rightBarButtonItem?.isHidden = false
         
         addFavoriteView(isFavorite: data.isFavorite)
         configureView(data: data)
@@ -248,8 +251,13 @@ extension DetailViewController: DetailViewProtocol {
         posterImage.isHidden = true
         stackTitle.isHidden = true
         stackDescription.isHidden = true
+        navigationItem.rightBarButtonItem?.isHidden = true
         
         errorLabel.text = "Error occurred with message:\n\(message)"
+    }
+    
+    func onFavoriteState(isFavorite: Bool) {
+        navigationItem.rightBarButtonItem?.image =  UIImage(systemName: isFavorite ? "heart.fill" : "heart")
     }
     
 }

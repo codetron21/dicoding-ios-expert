@@ -34,9 +34,11 @@ class HomePresenter: HomePresenterProtocol {
     func viewWillAppear() {
         if !data.isEmpty { return }
         
-        self.view?.onLoadingState()
         useCase.getTopAnime()
             .observe(on: MainScheduler.instance)
+            .do(onSubscribe: {
+                self.view?.onLoadingState()
+            })
             .subscribe { result in
                 self.data = result
                 self.view?.onBindSuccessState(data: self.data)

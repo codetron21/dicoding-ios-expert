@@ -15,6 +15,7 @@
 		181920FB29877AF300D0A8B0 /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */; };
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
+		18ED3C002987BBB90085FF3E /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */; };
 		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
 		18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498429853FF000AB7587 /* HomeInteractor.swift */; };
 		18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49882985410A00AB7587 /* RemoteDataSource.swift */; };
@@ -53,6 +54,7 @@
 		181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		18FA498429853FF000AB7587 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		18FA49882985410A00AB7587 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				18FA498429853FF000AB7587 /* HomeInteractor.swift */,
 				18161F4A2986947500384C68 /* DetailInteractor.swift */,
+				18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */,
 			);
 			path = "Use Case";
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
 				18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */,
 				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
+				18ED3C002987BBB90085FF3E /* FavoriteInteractor.swift in Sources */,
 				18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */,
 				18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */,
 				18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */,

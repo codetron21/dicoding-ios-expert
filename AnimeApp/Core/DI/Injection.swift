@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 final class Injection {
     
@@ -15,8 +16,10 @@ final class Injection {
     private init () {}
     
     private func provideRepository() -> AnimeRepositoryProtocol {
-        let remote: RemoteDataSource = RemoteDataSource.shared
-        return AnimeRepository.sharedInstance(remote)
+        let realm = try? Realm()
+        let remote: RemoteDataSourceProtocol = RemoteDataSource.shared
+        let locale: LocaleDataSourceProtocol = LocaleDataSource.sharedInstance(realm)
+        return AnimeRepository.sharedInstance(remote, locale)
     }
     
     private func provideHomeUseCase() -> HomeUseCase {
@@ -27,6 +30,11 @@ final class Injection {
     private func provideDetailUseCase() -> DetailUseCase {
         let repository = provideRepository()
         return DetailInteractor(repository: repository)
+    }
+    
+    private func provideFavoriteUseCase() -> FavoriteUseCase {
+        let repository = provideRepository()
+        return FavoriteInteractor(repository: repository)
     }
     
     func provideAppRouter(with uiVc: UIViewController? = nil) -> AppRouterProtocol {
@@ -45,6 +53,11 @@ final class Injection {
     func provideDetailPresenter(with view: DetailViewProtocol) -> DetailPresenterProtocol {
         let useCase = provideDetailUseCase()
         return DetailPresenter(useCase: useCase, view: view)
+    }
+    
+    func provideFavoritePresenter(with view: FavoriteViewProtocol, appRouter: AppRouterProtocol) -> FavoritePresenterProtocol {
+        let useCase = provideFavoriteUseCase()
+        return FavoritePresenter(useCase: useCase, view: view, router: appRouter)
     }
     
 }

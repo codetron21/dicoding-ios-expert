@@ -9,10 +9,17 @@ import Foundation
 import UIKit
 
 protocol FavoriteViewProtocol: AnyObject {
-    
+    func onLoadingState()
+    func onBindSuccessState(data: [ItemAnimeModel])
+    func onBindFailureState(message: String)
 }
 
 class FavoriteViewController: UIViewController {
+    
+    private lazy var presenter: FavoritePresenterProtocol = {
+        let router = Injection.shared.provideAppRouter(with: self)
+        return Injection.shared.provideFavoritePresenter(with: self, appRouter: router)
+    }()
     
     private let tableAnime: UITableView = {
         let table = UITableView()
@@ -51,6 +58,7 @@ class FavoriteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        presenter.viewWillAppear()
     }
     
     private func setupView() {
@@ -105,6 +113,34 @@ class FavoriteViewController: UIViewController {
         
         NSLayoutConstraint.activate(constraint)
     }
+}
+
+extension FavoriteViewController: FavoriteViewProtocol {
+    
+    func onLoadingState() {
+        print("DEBUG: favorite view loading")
+        loadingLabel.isHidden = false
+        errorLabel.isHidden = true
+    }
+    
+    func onBindSuccessState(data: [ItemAnimeModel]) {
+        print("DEBUG: favorite view success")
+        loadingLabel.isHidden = true
+        errorLabel.isHidden = !data.isEmpty
+        tableAnime.reloadData()
+        
+        if data.isEmpty {
+            errorLabel.text = "Empty animes"
+        }
+    }
+    
+    func onBindFailureState(message: String) {
+        print("DEBUG: favorite view error")
+        loadingLabel.isHidden = true
+        errorLabel.isHidden = false
+        errorLabel.text = "Error occurred with message:\n\(message)"
+    }
+    
     
 }
 
@@ -112,14 +148,16 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter.onItemDidSelected(at: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return presenter.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimeItemCell.id, for: indexPath) as? AnimeItemCell else { return UITableViewCell() }
+        cell.anime = presenter.data[indexPath.row]
         return cell
     }
     
