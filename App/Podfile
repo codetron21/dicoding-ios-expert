@@ -1,12 +1,18 @@
 platform :ios, '13.0'
 
+use_frameworks!
+workspace 'AnimeApp'
+
 target 'AnimeApp' do
-  use_frameworks!
   pod 'SDWebImage'
   pod 'SwiftLint'
   pod 'RxSwift'
   pod 'Alamofire'
   pod 'RealmSwift', '~>10'
+end
+
+target 'Core' do
+  project '../Core/Core'
 end
 
 post_install do |installer|
