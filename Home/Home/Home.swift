@@ -1,12 +1,14 @@
 //
-//  Hello.swift
-//  Core
+//  Home.swift
+//  Home
 //
 //  Created by Irsyad Purbha on 03/02/23.
 //
 
 import Foundation
+import Core
 
 public func hello() -> String {
-    return "Hello from core"
+    print(Core.hello())
+    return "Hello from home"
 }
