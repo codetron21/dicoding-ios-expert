@@ -7,12 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18298B87298E7FC10079C434 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; };
+		18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		183528BC298E06F700A425FE /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528BB298E06F700A425FE /* AnimeMapper.swift */; };
+		183528C0298E07AE00A425FE /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528BF298E07AE00A425FE /* Injection.swift */; };
+		183528D0298E0B2300A425FE /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528CF298E0B2300A425FE /* LocaleDataSource.swift */; };
+		183528D2298E0B6100A425FE /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528D1298E0B6100A425FE /* AnimeRepository.swift */; };
+		18F3BB4D298DFE1D00EBA6D2 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB49298DFE1D00EBA6D2 /* FavoritePresenter.swift */; };
+		18F3BB4E298DFE1D00EBA6D2 /* AnimeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB4A298DFE1D00EBA6D2 /* AnimeItemCell.swift */; };
+		18F3BB4F298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB4B298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift */; };
+		18F3BB50298DFE1D00EBA6D2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB4C298DFE1D00EBA6D2 /* FavoriteViewController.swift */; };
+		18F3BB52298DFE3D00EBA6D2 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB51298DFE3D00EBA6D2 /* FavoriteInteractor.swift */; };
+		18F3BB54298DFE5000EBA6D2 /* ItemAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB53298DFE5000EBA6D2 /* ItemAnimeModel.swift */; };
+		18F3BB67298E040700EBA6D2 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB66298E040700EBA6D2 /* Shared.framework */; };
+		18F3BB68298E040700EBA6D2 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB66298E040700EBA6D2 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26B887C4298CFE5800A24428 /* Favorite.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B887C3298CFE5800A24428 /* Favorite.docc */; };
 		26B887C5298CFE5800A24428 /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B887C2298CFE5800A24428 /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B887F3298CFF4200A24428 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B887F2298CFF4200A24428 /* Favorite.swift */; };
 		26B887FB298CFF8C00A24428 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887FA298CFF8C00A24428 /* Core.framework */; };
 		26B887FC298CFF8C00A24428 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887FA298CFF8C00A24428 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DC469CBD688E94C7CD293C70 /* Pods_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9EEA0CA0A2E8A06313BB18 /* Pods_Favorite.framework */; };
+		D54963C6F0664A16563AFBC2 /* Pods_Locale_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30573633460277157E7136A2 /* Pods_Locale_Favorite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +36,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				26B887FC298CFF8C00A24428 /* Core.framework in Embed Frameworks */,
+				18F3BB68298E040700EBA6D2 /* Shared.framework in Embed Frameworks */,
+				18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,13 +46,26 @@
 
 /* Begin PBXFileReference section */
 		062769E347062C96662EC8E7 /* Pods-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.release.xcconfig"; sourceTree = "<group>"; };
+		18298B86298E7FC10079C434 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183528BB298E06F700A425FE /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
+		183528BF298E07AE00A425FE /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		183528CF298E0B2300A425FE /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
+		183528D1298E0B6100A425FE /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
+		18F3BB49298DFE1D00EBA6D2 /* FavoritePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritePresenter.swift; path = Presentation/FavoritePresenter.swift; sourceTree = "<group>"; };
+		18F3BB4A298DFE1D00EBA6D2 /* AnimeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimeItemCell.swift; path = Presentation/AnimeItemCell.swift; sourceTree = "<group>"; };
+		18F3BB4B298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteModuleBuilder.swift; path = Presentation/FavoriteModuleBuilder.swift; sourceTree = "<group>"; };
+		18F3BB4C298DFE1D00EBA6D2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteViewController.swift; path = Presentation/FavoriteViewController.swift; sourceTree = "<group>"; };
+		18F3BB51298DFE3D00EBA6D2 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		18F3BB53298DFE5000EBA6D2 /* ItemAnimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAnimeModel.swift; sourceTree = "<group>"; };
+		18F3BB66298E040700EBA6D2 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		204B2AC953FCF770E4F97FD6 /* Pods-Favorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.debug.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.debug.xcconfig"; sourceTree = "<group>"; };
 		26B887BF298CFE5800A24428 /* Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887C2298CFE5800A24428 /* Favorite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Favorite.h; sourceTree = "<group>"; };
 		26B887C3298CFE5800A24428 /* Favorite.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Favorite.docc; sourceTree = "<group>"; };
-		26B887F2298CFF4200A24428 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		26B887FA298CFF8C00A24428 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C9EEA0CA0A2E8A06313BB18 /* Pods_Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30573633460277157E7136A2 /* Pods_Locale_Favorite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locale_Favorite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825E6AFD4B9CC02859087E8A /* Pods-Locale-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locale-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Locale-Favorite/Pods-Locale-Favorite.release.xcconfig"; sourceTree = "<group>"; };
+		86FA5BEAACFD16195435E5D2 /* Pods-Locale-Favorite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locale-Favorite.debug.xcconfig"; path = "Target Support Files/Pods-Locale-Favorite/Pods-Locale-Favorite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,14 +73,93 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC469CBD688E94C7CD293C70 /* Pods_Favorite.framework in Frameworks */,
+				18F3BB67298E040700EBA6D2 /* Shared.framework in Frameworks */,
 				26B887FB298CFF8C00A24428 /* Core.framework in Frameworks */,
+				18298B87298E7FC10079C434 /* Detail.framework in Frameworks */,
+				D54963C6F0664A16563AFBC2 /* Pods_Locale_Favorite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183528BA298E06EB00A425FE /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				183528BB298E06F700A425FE /* AnimeMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		183528CB298E0ADB00A425FE /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				183528CF298E0B2300A425FE /* LocaleDataSource.swift */,
+			);
+			path = Locale;
+			sourceTree = "<group>";
+		};
+		18826693298DFB53004BACF0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				18F3BB4A298DFE1D00EBA6D2 /* AnimeItemCell.swift */,
+				18F3BB4B298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift */,
+				18F3BB49298DFE1D00EBA6D2 /* FavoritePresenter.swift */,
+				18F3BB4C298DFE1D00EBA6D2 /* FavoriteViewController.swift */,
+			);
+			name = Presentation;
+			sourceTree = "<group>";
+		};
+		18826694298DFB5C004BACF0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				18826699298DFB8A004BACF0 /* Use Case */,
+				18826698298DFB86004BACF0 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		18826695298DFB62004BACF0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				183528CB298E0ADB00A425FE /* Locale */,
+				183528D1298E0B6100A425FE /* AnimeRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		18826696298DFB66004BACF0 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				183528BF298E07AE00A425FE /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		18826697298DFB6D004BACF0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				183528BA298E06EB00A425FE /* Mapper */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		18826698298DFB86004BACF0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18F3BB53298DFE5000EBA6D2 /* ItemAnimeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18826699298DFB8A004BACF0 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				18F3BB51298DFE3D00EBA6D2 /* FavoriteInteractor.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
 		26B887B5298CFE5800A24428 = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +181,13 @@
 		26B887C1298CFE5800A24428 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				18826697298DFB6D004BACF0 /* Utils */,
+				18826696298DFB66004BACF0 /* DI */,
+				18826695298DFB62004BACF0 /* Data */,
+				18826694298DFB5C004BACF0 /* Domain */,
+				18826693298DFB53004BACF0 /* Presentation */,
 				26B887C2298CFE5800A24428 /* Favorite.h */,
 				26B887C3298CFE5800A24428 /* Favorite.docc */,
-				26B887F2298CFF4200A24428 /* Favorite.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -86,6 +197,8 @@
 			children = (
 				204B2AC953FCF770E4F97FD6 /* Pods-Favorite.debug.xcconfig */,
 				062769E347062C96662EC8E7 /* Pods-Favorite.release.xcconfig */,
+				86FA5BEAACFD16195435E5D2 /* Pods-Locale-Favorite.debug.xcconfig */,
+				825E6AFD4B9CC02859087E8A /* Pods-Locale-Favorite.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../App/Pods;
@@ -94,8 +207,10 @@
 		EB43DF88AEA38A8FBFBC3B6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18298B86298E7FC10079C434 /* Detail.framework */,
+				18F3BB66298E040700EBA6D2 /* Shared.framework */,
 				26B887FA298CFF8C00A24428 /* Core.framework */,
-				9C9EEA0CA0A2E8A06313BB18 /* Pods_Favorite.framework */,
+				30573633460277157E7136A2 /* Pods_Locale_Favorite.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,6 +239,7 @@
 				26B887BC298CFE5800A24428 /* Frameworks */,
 				26B887BD298CFE5800A24428 /* Resources */,
 				26B887FD298CFF8C00A24428 /* Embed Frameworks */,
+				18826658298D313E004BACF0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -177,6 +293,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18826658298D313E004BACF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint 'Favorite'\nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
 		53B7D7A7BE129763381D47F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,7 +325,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Favorite-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Locale-Favorite-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -206,8 +339,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F3BB54298DFE5000EBA6D2 /* ItemAnimeModel.swift in Sources */,
+				18F3BB50298DFE1D00EBA6D2 /* FavoriteViewController.swift in Sources */,
 				26B887C4298CFE5800A24428 /* Favorite.docc in Sources */,
-				26B887F3298CFF4200A24428 /* Favorite.swift in Sources */,
+				183528D0298E0B2300A425FE /* LocaleDataSource.swift in Sources */,
+				183528BC298E06F700A425FE /* AnimeMapper.swift in Sources */,
+				18F3BB4F298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift in Sources */,
+				18F3BB4D298DFE1D00EBA6D2 /* FavoritePresenter.swift in Sources */,
+				183528C0298E07AE00A425FE /* Injection.swift in Sources */,
+				18F3BB52298DFE3D00EBA6D2 /* FavoriteInteractor.swift in Sources */,
+				18F3BB4E298DFE1D00EBA6D2 /* AnimeItemCell.swift in Sources */,
+				183528D2298E0B6100A425FE /* AnimeRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +478,7 @@
 		};
 		26B887C9298CFE5800A24428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 204B2AC953FCF770E4F97FD6 /* Pods-Favorite.debug.xcconfig */;
+			baseConfigurationReference = 86FA5BEAACFD16195435E5D2 /* Pods-Locale-Favorite.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -364,7 +506,7 @@
 		};
 		26B887CA298CFE5800A24428 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 062769E347062C96662EC8E7 /* Pods-Favorite.release.xcconfig */;
+			baseConfigurationReference = 825E6AFD4B9CC02859087E8A /* Pods-Locale-Favorite.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

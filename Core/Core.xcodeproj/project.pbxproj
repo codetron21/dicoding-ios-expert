@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		02D9548716178B78AD2C08B3 /* Pods_Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B02B3C9BE731B2D8E4C69E /* Pods_Core.framework */; };
+		183528C6298E0A5800A425FE /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528C5298E0A5800A425FE /* ApiCall.swift */; };
+		183528CA298E0AA200A425FE /* CustomError+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528C9298E0AA200A425FE /* CustomError+Ext.swift */; };
+		183528ED298E141300A425FE /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18826644298D2FE3004BACF0 /* GeneralResponse.swift */; };
+		183528EE298E141600A425FE /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18826645298D2FE3004BACF0 /* ErrorResponse.swift */; };
 		26B886D5298CEF1900A24428 /* Core.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B886D4298CEF1900A24428 /* Core.docc */; };
 		26B886D6298CEF1900A24428 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B886D3298CEF1900A24428 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B886DD298CEF2800A24428 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B886DC298CEF2800A24428 /* Hello.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183528C5298E0A5800A425FE /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		183528C9298E0AA200A425FE /* CustomError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomError+Ext.swift"; sourceTree = "<group>"; };
+		18826644298D2FE3004BACF0 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		18826645298D2FE3004BACF0 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		26B886D0298CEF1900A24428 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B886D3298CEF1900A24428 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		26B886D4298CEF1900A24428 /* Core.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Core.docc; sourceTree = "<group>"; };
-		26B886DC298CEF2800A24428 /* Hello.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
 		8047FAA26BDC9140289A4C7B /* Pods-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.release.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.release.xcconfig"; sourceTree = "<group>"; };
 		A8B02B3C9BE731B2D8E4C69E /* Pods_Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70F5850101B532718332087 /* Pods-Core.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Core.debug.xcconfig"; path = "Target Support Files/Pods-Core/Pods-Core.debug.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +41,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183528C4298E0A4B00A425FE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				183528C5298E0A5800A425FE /* ApiCall.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		183528C7298E0A6E00A425FE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				183528C4298E0A4B00A425FE /* Network */,
+				183528C8298E0A7800A425FE /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		183528C8298E0A7800A425FE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				183528C9298E0AA200A425FE /* CustomError+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		18826647298D2FE3004BACF0 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				18826644298D2FE3004BACF0 /* GeneralResponse.swift */,
+				18826645298D2FE3004BACF0 /* ErrorResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		18826649298D2FE3004BACF0 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				18826647298D2FE3004BACF0 /* Response */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		1882664B298D2FE3004BACF0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				18826649298D2FE3004BACF0 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		26B886C6298CEF1900A24428 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +112,10 @@
 		26B886D2298CEF1900A24428 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				183528C7298E0A6E00A425FE /* Utils */,
+				1882664B298D2FE3004BACF0 /* Data */,
 				26B886D3298CEF1900A24428 /* Core.h */,
 				26B886D4298CEF1900A24428 /* Core.docc */,
-				26B886DC298CEF2800A24428 /* Hello.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -104,6 +161,7 @@
 				26B886CC298CEF1900A24428 /* Sources */,
 				26B886CD298CEF1900A24428 /* Frameworks */,
 				26B886CE298CEF1900A24428 /* Resources */,
+				18826655298D30FC004BACF0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -179,6 +237,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		18826655298D30FC004BACF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint 'Core'\nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -186,8 +261,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B886DD298CEF2800A24428 /* Hello.swift in Sources */,
+				183528EE298E141600A425FE /* ErrorResponse.swift in Sources */,
+				183528C6298E0A5800A425FE /* ApiCall.swift in Sources */,
+				183528ED298E141300A425FE /* GeneralResponse.swift in Sources */,
 				26B886D5298CEF1900A24428 /* Core.docc in Sources */,
+				183528CA298E0AA200A425FE /* CustomError+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

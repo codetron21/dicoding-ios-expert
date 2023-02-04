@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18826621298D2CE5004BACF0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882661F298D2CE4004BACF0 /* AboutViewController.swift */; };
+		18826622298D2CE5004BACF0 /* AboutModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18826620298D2CE4004BACF0 /* AboutModuleBuilder.swift */; };
 		26B887DA298CFE6F00A24428 /* About.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B887D9298CFE6F00A24428 /* About.docc */; };
 		26B887DB298CFE6F00A24428 /* About.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B887D8298CFE6F00A24428 /* About.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B887EF298CFF2800A24428 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B887EE298CFF2800A24428 /* About.swift */; };
 		26B88803298CFF9E00A24428 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B88802298CFF9E00A24428 /* Core.framework */; };
 		26B88804298CFF9E00A24428 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B88802298CFF9E00A24428 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB52491B06908BAAE28D0C22 /* Pods_About.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B48F63F7D467A40711B8E61 /* Pods_About.framework */; };
@@ -31,10 +32,11 @@
 
 /* Begin PBXFileReference section */
 		024407938BE6875FB899302F /* Pods-About.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-About.debug.xcconfig"; path = "Target Support Files/Pods-About/Pods-About.debug.xcconfig"; sourceTree = "<group>"; };
+		1882661F298D2CE4004BACF0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		18826620298D2CE4004BACF0 /* AboutModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModuleBuilder.swift; sourceTree = "<group>"; };
 		26B887D5298CFE6F00A24428 /* About.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = About.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887D8298CFE6F00A24428 /* About.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = About.h; sourceTree = "<group>"; };
 		26B887D9298CFE6F00A24428 /* About.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = About.docc; sourceTree = "<group>"; };
-		26B887EE298CFF2800A24428 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		26B88802298CFF9E00A24428 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B48F63F7D467A40711B8E61 /* Pods_About.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_About.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E0FF263D0DAB5C7387A9F0 /* Pods-About.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-About.release.xcconfig"; path = "Target Support Files/Pods-About/Pods-About.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,9 +76,10 @@
 		26B887D7298CFE6F00A24428 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				1882661F298D2CE4004BACF0 /* AboutViewController.swift */,
+				18826620298D2CE4004BACF0 /* AboutModuleBuilder.swift */,
 				26B887D8298CFE6F00A24428 /* About.h */,
 				26B887D9298CFE6F00A24428 /* About.docc */,
-				26B887EE298CFF2800A24428 /* About.swift */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -124,6 +127,7 @@
 				26B887D2298CFE6F00A24428 /* Frameworks */,
 				26B887D3298CFE6F00A24428 /* Resources */,
 				26B88805298CFF9E00A24428 /* Embed Frameworks */,
+				18826656298D311D004BACF0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -177,6 +181,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		18826656298D311D004BACF0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint 'About'\nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
+		};
 		675D5457BBD19A1EF11D29AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,8 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18826621298D2CE5004BACF0 /* AboutViewController.swift in Sources */,
 				26B887DA298CFE6F00A24428 /* About.docc in Sources */,
-				26B887EF298CFF2800A24428 /* About.swift in Sources */,
+				18826622298D2CE5004BACF0 /* AboutModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

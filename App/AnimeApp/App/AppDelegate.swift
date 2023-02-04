@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import Shared
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, HasAppRouter {
+    
+    func appRouter(uiVc: UIViewController) -> Shared.AppRouterProtocol {
+        return AppRouter.sharedInstance(uiVc)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

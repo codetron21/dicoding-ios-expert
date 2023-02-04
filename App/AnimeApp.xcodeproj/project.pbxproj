@@ -7,40 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18161F47298686DB00384C68 /* DetailAnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F46298686DB00384C68 /* DetailAnimeResponse.swift */; };
-		18161F49298692B800384C68 /* DetailAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F48298692B800384C68 /* DetailAnimeModel.swift */; };
-		18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4A2986947500384C68 /* DetailInteractor.swift */; };
-		18161F4D2986955500384C68 /* DetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18161F4C2986955500384C68 /* DetailModuleBuilder.swift */; };
-		181920F9298779EF00D0A8B0 /* AnimeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920F8298779EF00D0A8B0 /* AnimeEntity.swift */; };
-		181920FB29877AF300D0A8B0 /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */; };
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
-		18ED3C002987BBB90085FF3E /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */; };
-		18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA497A29853CAA00AB7587 /* HomePresenter.swift */; };
-		18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498429853FF000AB7587 /* HomeInteractor.swift */; };
-		18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49882985410A00AB7587 /* RemoteDataSource.swift */; };
-		18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498A298546A500AB7587 /* ListAnimeResponse.swift */; };
-		18FA498D2985475B00AB7587 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498C2985475B00AB7587 /* GeneralResponse.swift */; };
-		18FA49902985520800AB7587 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA498F2985520800AB7587 /* ApiCall.swift */; };
-		18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49922985548A00AB7587 /* CustomError+Ext.swift */; };
-		18FA4995298556BE00AB7587 /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA4994298556BE00AB7587 /* AnimeRepository.swift */; };
-		18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA4996298557D100AB7587 /* ItemAnimeModel.swift */; };
-		18FA499A2985583200AB7587 /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49992985583200AB7587 /* AnimeMapper.swift */; };
-		18FA499E2985601900AB7587 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499D2985601900AB7587 /* Injection.swift */; };
-		18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */; };
-		18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */; };
-		18FA49A82986224200AB7587 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49A72986224200AB7587 /* AboutViewController.swift */; };
+		18826672298DCB2E004BACF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18826671298DCB2E004BACF0 /* Shared.framework */; };
+		18826673298DCB2E004BACF0 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18826671298DCB2E004BACF0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49AE2986253D00AB7587 /* AppRouter.swift */; };
-		18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */; };
-		18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */; };
-		18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */; };
-		18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B72986330400AB7587 /* DetailViewController.swift */; };
-		18FA49BA2986360200AB7587 /* FavoritePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49B92986360200AB7587 /* FavoritePresenter.swift */; };
-		18FA49BC2986360E00AB7587 /* FavoriteModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */; };
-		18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA49BD2986368E00AB7587 /* DetailPresenter.swift */; };
 		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
 		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
-		266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344832983D0DF00C8F0E0 /* HomeViewController.swift */; };
 		266344892983D0E000C8F0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266344882983D0E000C8F0E0 /* Assets.xcassets */; };
 		26B887E2298CFEEF00A24428 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887E1298CFEEF00A24428 /* Home.framework */; };
 		26B887E3298CFEEF00A24428 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887E1298CFEEF00A24428 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,6 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				18826673298DCB2E004BACF0 /* Shared.framework in Embed Frameworks */,
 				26B887EA298CFEFC00A24428 /* Favorite.framework in Embed Frameworks */,
 				26B887E3298CFEEF00A24428 /* Home.framework in Embed Frameworks */,
 				26B887ED298CFF0600A24428 /* About.framework in Embed Frameworks */,
@@ -71,41 +45,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18161F46298686DB00384C68 /* DetailAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeResponse.swift; sourceTree = "<group>"; };
-		18161F48298692B800384C68 /* DetailAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeModel.swift; sourceTree = "<group>"; };
-		18161F4A2986947500384C68 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
-		18161F4C2986955500384C68 /* DetailModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModuleBuilder.swift; sourceTree = "<group>"; };
-		181920F8298779EF00D0A8B0 /* AnimeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeEntity.swift; sourceTree = "<group>"; };
-		181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		182CF3942984D33400AA4142 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
-		18FA497A29853CAA00AB7587 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		18FA498429853FF000AB7587 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
-		18FA49882985410A00AB7587 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
-		18FA498A298546A500AB7587 /* ListAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAnimeResponse.swift; sourceTree = "<group>"; };
-		18FA498C2985475B00AB7587 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
-		18FA498F2985520800AB7587 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
-		18FA49922985548A00AB7587 /* CustomError+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomError+Ext.swift"; sourceTree = "<group>"; };
-		18FA4994298556BE00AB7587 /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
-		18FA4996298557D100AB7587 /* ItemAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAnimeModel.swift; sourceTree = "<group>"; };
-		18FA49992985583200AB7587 /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
-		18FA499D2985601900AB7587 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
-		18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeItemCell.swift; sourceTree = "<group>"; };
-		18FA49A72986224200AB7587 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		18826671298DCB2E004BACF0 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FA49AE2986253D00AB7587 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
-		18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModuleBuilder.swift; sourceTree = "<group>"; };
-		18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		18FA49B72986330400AB7587 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		18FA49B92986360200AB7587 /* FavoritePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenter.swift; sourceTree = "<group>"; };
-		18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModuleBuilder.swift; sourceTree = "<group>"; };
-		18FA49BD2986368E00AB7587 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		266344832983D0DF00C8F0E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		266344882983D0E000C8F0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2663448D2983D0E000C8F0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B886DE298CF00500A24428 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D60A66CCD931449F704D83 /* Pods_AnimeApp.framework in Frameworks */,
+				18826672298DCB2E004BACF0 /* Shared.framework in Frameworks */,
 				26B887E2298CFEEF00A24428 /* Home.framework in Frameworks */,
 				26B887E9298CFEFC00A24428 /* Favorite.framework in Frameworks */,
 				26B887EC298CFF0600A24428 /* About.framework in Frameworks */,
@@ -134,23 +81,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18161F442986802C00384C68 /* Locale */ = {
-			isa = PBXGroup;
-			children = (
-				18161F452986803200384C68 /* Entity */,
-				181920FA29877AF300D0A8B0 /* LocaleDataSource.swift */,
-			);
-			path = Locale;
-			sourceTree = "<group>";
-		};
-		18161F452986803200384C68 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				181920F8298779EF00D0A8B0 /* AnimeEntity.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		182CF3852984CDEE00AA4142 /* Support File */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,23 +102,9 @@
 		182CF3882984CEAA00AA4142 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				18FA49B6298632F300AB7587 /* Detail */,
-				18FA49A62986221C00AB7587 /* Favorite */,
-				18FA49A52986221500AB7587 /* About */,
 				182CF38A2984CF1C00AA4142 /* Splash */,
-				182CF3892984CEB300AA4142 /* Home */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		182CF3892984CEB300AA4142 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				266344832983D0DF00C8F0E0 /* HomeViewController.swift */,
-				18FA497A29853CAA00AB7587 /* HomePresenter.swift */,
-				18FA49B029862C7800AB7587 /* HomeModuleBuilder.swift */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		182CF38A2984CF1C00AA4142 /* Splash */ = {
@@ -199,161 +115,12 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		18FA497E29853F6C00AB7587 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				18FA499C2985600A00AB7587 /* DI */,
-				18FA498129853FB600AB7587 /* Utils */,
-				18FA498029853F9800AB7587 /* Data */,
-				18FA497F29853F9200AB7587 /* Domain */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		18FA497F29853F9200AB7587 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				18FA498329853FD900AB7587 /* Use Case */,
-				18FA498229853FD300AB7587 /* Model */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		18FA498029853F9800AB7587 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				18161F442986802C00384C68 /* Locale */,
-				18FA4986298540F200AB7587 /* Remote */,
-				18FA4994298556BE00AB7587 /* AnimeRepository.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		18FA498129853FB600AB7587 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49A22985F7BB00AB7587 /* View */,
-				18FA49982985582000AB7587 /* Mapper */,
-				18FA49912985547800AB7587 /* Extension */,
-				18FA498E298551F900AB7587 /* Network */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		18FA498229853FD300AB7587 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				18FA4996298557D100AB7587 /* ItemAnimeModel.swift */,
-				18161F48298692B800384C68 /* DetailAnimeModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		18FA498329853FD900AB7587 /* Use Case */ = {
-			isa = PBXGroup;
-			children = (
-				18FA498429853FF000AB7587 /* HomeInteractor.swift */,
-				18161F4A2986947500384C68 /* DetailInteractor.swift */,
-				18ED3BFF2987BBB90085FF3E /* FavoriteInteractor.swift */,
-			);
-			path = "Use Case";
-			sourceTree = "<group>";
-		};
-		18FA4986298540F200AB7587 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-				18FA4987298540FC00AB7587 /* Response */,
-				18FA49882985410A00AB7587 /* RemoteDataSource.swift */,
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
-		18FA4987298540FC00AB7587 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				18FA498A298546A500AB7587 /* ListAnimeResponse.swift */,
-				18FA498C2985475B00AB7587 /* GeneralResponse.swift */,
-				18FA499F2985ED5D00AB7587 /* ErrorResponse.swift */,
-				18161F46298686DB00384C68 /* DetailAnimeResponse.swift */,
-			);
-			path = Response;
-			sourceTree = "<group>";
-		};
-		18FA498E298551F900AB7587 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				18FA498F2985520800AB7587 /* ApiCall.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		18FA49912985547800AB7587 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49922985548A00AB7587 /* CustomError+Ext.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		18FA49982985582000AB7587 /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49992985583200AB7587 /* AnimeMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		18FA499C2985600A00AB7587 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				18FA499D2985601900AB7587 /* Injection.swift */,
-			);
-			path = DI;
-			sourceTree = "<group>";
-		};
-		18FA49A22985F7BB00AB7587 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49A32985F7CD00AB7587 /* AnimeItemCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		18FA49A52986221500AB7587 /* About */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49A72986224200AB7587 /* AboutViewController.swift */,
-				18FA49B229862CD500AB7587 /* AboutModuleBuilder.swift */,
-			);
-			path = About;
-			sourceTree = "<group>";
-		};
-		18FA49A62986221C00AB7587 /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49B4298632EC00AB7587 /* FavoriteViewController.swift */,
-				18FA49B92986360200AB7587 /* FavoritePresenter.swift */,
-				18FA49BB2986360E00AB7587 /* FavoriteModuleBuilder.swift */,
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
 		18FA49AD2986252700AB7587 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				18FA49AE2986253D00AB7587 /* AppRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		18FA49B6298632F300AB7587 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-				18FA49B72986330400AB7587 /* DetailViewController.swift */,
-				18FA49BD2986368E00AB7587 /* DetailPresenter.swift */,
-				18161F4C2986955500384C68 /* DetailModuleBuilder.swift */,
-			);
-			path = Detail;
 			sourceTree = "<group>";
 		};
 		266344732983D0DF00C8F0E0 = {
@@ -379,17 +146,18 @@
 			isa = PBXGroup;
 			children = (
 				18FA49AD2986252700AB7587 /* Router */,
-				18FA497E29853F6C00AB7587 /* Core */,
 				182CF3882984CEAA00AA4142 /* Module */,
 				182CF3862984CE0100AA4142 /* App */,
 				182CF3852984CDEE00AA4142 /* Support File */,
 			);
-			path = AnimeApp;
-			sourceTree = "<group>";
+			name = AnimeApp;
+			path = "/Users/apple/Documents/dicoding/ios-expert/dicoding-ios-expert/App/AnimeApp";
+			sourceTree = "<absolute>";
 		};
 		303CD22D1785C624D0E1B82D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18826671298DCB2E004BACF0 /* Shared.framework */,
 				26B887EB298CFF0600A24428 /* About.framework */,
 				26B887E8298CFEFC00A24428 /* Favorite.framework */,
 				26B887E5298CFEF400A24428 /* Detail.framework */,
@@ -420,7 +188,6 @@
 				266344782983D0DF00C8F0E0 /* Sources */,
 				266344792983D0DF00C8F0E0 /* Frameworks */,
 				2663447A2983D0DF00C8F0E0 /* Resources */,
-				1D9F1B290D03B90C6657820E /* [CP] Embed Pods Frameworks */,
 				182CF3932984D2EE00AA4142 /* ShellScript */,
 				26B887E4298CFEEF00A24428 /* Embed Frameworks */,
 			);
@@ -497,23 +264,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then \n    swiftlint 'AnimeApp'\nelse \n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi\n";
 		};
-		1D9F1B290D03B90C6657820E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimeApp/Pods-AnimeApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7CAAE386BF0FB45ED49BE487 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,38 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FA499E2985601900AB7587 /* Injection.swift in Sources */,
-				18FA49A42985F7CD00AB7587 /* AnimeItemCell.swift in Sources */,
-				18FA499A2985583200AB7587 /* AnimeMapper.swift in Sources */,
-				18FA49BC2986360E00AB7587 /* FavoriteModuleBuilder.swift in Sources */,
-				18FA49902985520800AB7587 /* ApiCall.swift in Sources */,
-				18FA498B298546A500AB7587 /* ListAnimeResponse.swift in Sources */,
-				18FA498529853FF000AB7587 /* HomeInteractor.swift in Sources */,
-				18FA49892985410A00AB7587 /* RemoteDataSource.swift in Sources */,
-				18FA49BE2986368F00AB7587 /* DetailPresenter.swift in Sources */,
-				181920F9298779EF00D0A8B0 /* AnimeEntity.swift in Sources */,
 				18FA49AF2986253D00AB7587 /* AppRouter.swift in Sources */,
-				18FA49932985548A00AB7587 /* CustomError+Ext.swift in Sources */,
-				18161F4B2986947500384C68 /* DetailInteractor.swift in Sources */,
-				18FA49A02985ED5D00AB7587 /* ErrorResponse.swift in Sources */,
-				18ED3C002987BBB90085FF3E /* FavoriteInteractor.swift in Sources */,
-				18FA49B5298632EC00AB7587 /* FavoriteViewController.swift in Sources */,
-				18FA49B82986330400AB7587 /* DetailViewController.swift in Sources */,
-				18FA4997298557D100AB7587 /* ItemAnimeModel.swift in Sources */,
-				18FA49B329862CD500AB7587 /* AboutModuleBuilder.swift in Sources */,
-				18FA498D2985475B00AB7587 /* GeneralResponse.swift in Sources */,
-				18161F4D2986955500384C68 /* DetailModuleBuilder.swift in Sources */,
-				266344842983D0DF00C8F0E0 /* HomeViewController.swift in Sources */,
-				18161F49298692B800384C68 /* DetailAnimeModel.swift in Sources */,
-				18161F47298686DB00384C68 /* DetailAnimeResponse.swift in Sources */,
-				18FA49A82986224200AB7587 /* AboutViewController.swift in Sources */,
 				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
-				18FA49B129862C7800AB7587 /* HomeModuleBuilder.swift in Sources */,
 				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
-				181920FB29877AF300D0A8B0 /* LocaleDataSource.swift in Sources */,
-				18FA497B29853CAA00AB7587 /* HomePresenter.swift in Sources */,
-				18FA4995298556BE00AB7587 /* AnimeRepository.swift in Sources */,
-				18FA49BA2986360200AB7587 /* FavoritePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

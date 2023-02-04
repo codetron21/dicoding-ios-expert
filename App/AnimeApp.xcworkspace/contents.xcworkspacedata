@@ -11,15 +11,18 @@
       location = "group:../Core/Core.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../About/About.xcodeproj">
+      location = "group:../Home/Home.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:../Detail/Detail.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:../About/About.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:../Favorite/Favorite.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Home/Home.xcodeproj">
+      location = "group:../Shared/Shared.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,34 +1,58 @@
 platform :ios, '13.0'
 
-use_frameworks!
+inhibit_all_warnings!
+use_frameworks!:linkage => :static
 workspace 'AnimeApp'
 
-target 'AnimeApp' do
+pod 'SwiftLint'
+
+def view_pods
   pod 'SDWebImage'
-  pod 'SwiftLint'
   pod 'RxSwift'
-  pod 'Alamofire'
+end
+
+def local_pods
   pod 'RealmSwift', '~>10'
+end
+
+def network_pods
+  pod 'Alamofire'
+end
+
+target 'AnimeApp' do
+  project './AnimeApp'
 end
 
 target 'Core' do
   project '../Core/Core'
 end
 
-target 'Home' do
-  project '../Home/Home'
-end
-
-target 'Detail' do
-  project '../Detail/Detail'
-end
-
-target 'Favorite' do
-  project '../Favorite/Favorite'
-end
-
 target 'About' do
   project '../About/About'
+end
+
+target 'Shared' do
+  project '../Shared/Shared'
+end
+
+target 'Home' do
+  project '../Home/Home'
+  view_pods
+  network_pods
+end
+
+abstract_target 'Locale' do
+  local_pods
+  target 'Favorite' do
+    project '../Favorite/Favorite'
+    view_pods
+  end
+
+  target 'Detail' do
+    project '../Detail/Detail'
+    view_pods
+    network_pods
+  end
 end
 
 post_install do |installer|

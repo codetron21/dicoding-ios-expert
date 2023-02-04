@@ -7,13 +7,11 @@
 
 import Foundation
 import UIKit
-
-protocol AppRouterProtocol {
-    func defineNavRoot() -> UIViewController
-    func navigateToDetail(with id: Int)
-    func navigateToAbout()
-    func navigateToFavorite()
-}
+import About
+import Home
+import Detail
+import Favorite
+import Shared
 
 class AppRouter {
     
