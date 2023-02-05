@@ -1,3 +1,5 @@
+source 'https://github.com/codetron21/Modularization-CorePodSpecs-Module.git'
+
 platform :ios, '13.0'
 
 inhibit_all_warnings!
@@ -23,10 +25,6 @@ target 'AnimeApp' do
   project './AnimeApp'
 end
 
-target 'Core' do
-  project '../Core/Core'
-end
-
 target 'About' do
   project '../About/About'
 end
@@ -37,12 +35,15 @@ end
 
 target 'Home' do
   project '../Home/Home'
+  pod 'Core', '3.0.0'
   view_pods
   network_pods
 end
 
 abstract_target 'Locale' do
   local_pods
+  pod 'Core', '3.0.0'
+
   target 'Favorite' do
     project '../Favorite/Favorite'
     view_pods

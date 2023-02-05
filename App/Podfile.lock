@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.4)
+  - Core (3.0.0)
   - Realm (10.34.1):
     - Realm/Headers (= 10.34.1)
   - Realm/Headers (10.34.1)
@@ -13,12 +14,15 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Core (= 3.0.0)
   - RealmSwift (~> 10)
   - RxSwift
   - SDWebImage
   - SwiftLint
 
 SPEC REPOS:
+  https://github.com/codetron21/Modularization-CorePodSpecs-Module.git:
+    - Core
   trunk:
     - Alamofire
     - Realm
@@ -29,12 +33,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Core: b007d067a65ccac76acea1a7d37c4ee528eb1139
   Realm: fe824cd5b183cd55a50a6bcb4bce3ac1650e60b6
   RealmSwift: c7f668f82982fc8b62366b78b8dc761f15141df6
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: 9bec4c5cdd9579e1f57104735ee0c37df274d593
   SwiftLint: 77f7cb2b9bb81ab4a12fcc86448ba3f11afa50c6
 
-PODFILE CHECKSUM: 91979389f8495bdc7823f1407d46ca7e8817445d
+PODFILE CHECKSUM: d18bf44d4f60d5e2e21cc4d40a9f2d0e503413ad
 
 COCOAPODS: 1.11.3

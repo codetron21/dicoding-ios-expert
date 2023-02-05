@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1806A336298F328300EDCF61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A335298F328300EDCF61 /* Core.framework */; };
+		1806A337298F328300EDCF61 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A335298F328300EDCF61 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18298B87298E7FC10079C434 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; };
 		18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183528BC298E06F700A425FE /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528BB298E06F700A425FE /* AnimeMapper.swift */; };
@@ -23,8 +25,6 @@
 		18F3BB68298E040700EBA6D2 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB66298E040700EBA6D2 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26B887C4298CFE5800A24428 /* Favorite.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B887C3298CFE5800A24428 /* Favorite.docc */; };
 		26B887C5298CFE5800A24428 /* Favorite.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B887C2298CFE5800A24428 /* Favorite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B887FB298CFF8C00A24428 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887FA298CFF8C00A24428 /* Core.framework */; };
-		26B887FC298CFF8C00A24428 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887FA298CFF8C00A24428 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D54963C6F0664A16563AFBC2 /* Pods_Locale_Favorite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30573633460277157E7136A2 /* Pods_Locale_Favorite.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				26B887FC298CFF8C00A24428 /* Core.framework in Embed Frameworks */,
 				18F3BB68298E040700EBA6D2 /* Shared.framework in Embed Frameworks */,
+				1806A337298F328300EDCF61 /* Core.framework in Embed Frameworks */,
 				18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		062769E347062C96662EC8E7 /* Pods-Favorite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Favorite.release.xcconfig"; path = "Target Support Files/Pods-Favorite/Pods-Favorite.release.xcconfig"; sourceTree = "<group>"; };
+		1806A335298F328300EDCF61 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18298B86298E7FC10079C434 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183528BB298E06F700A425FE /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
 		183528BF298E07AE00A425FE /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
@@ -74,9 +75,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F3BB67298E040700EBA6D2 /* Shared.framework in Frameworks */,
-				26B887FB298CFF8C00A24428 /* Core.framework in Frameworks */,
 				18298B87298E7FC10079C434 /* Detail.framework in Frameworks */,
 				D54963C6F0664A16563AFBC2 /* Pods_Locale_Favorite.framework in Frameworks */,
+				1806A336298F328300EDCF61 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +208,7 @@
 		EB43DF88AEA38A8FBFBC3B6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1806A335298F328300EDCF61 /* Core.framework */,
 				18298B86298E7FC10079C434 /* Detail.framework */,
 				18F3BB66298E040700EBA6D2 /* Shared.framework */,
 				26B887FA298CFF8C00A24428 /* Core.framework */,

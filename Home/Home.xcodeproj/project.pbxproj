@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1806A330298F326100EDCF61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A32F298F326100EDCF61 /* Core.framework */; };
+		1806A331298F326100EDCF61 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A32F298F326100EDCF61 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183528B9298E06CF00A425FE /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528B8298E06CF00A425FE /* AnimeMapper.swift */; };
 		183528C2298E07C100A425FE /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528C1298E07C100A425FE /* Injection.swift */; };
 		183528D6298E0B8900A425FE /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528D5298E0B8900A425FE /* AnimeRepository.swift */; };
@@ -22,8 +24,6 @@
 		18F3BB65298E03F700EBA6D2 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB63298E03F700EBA6D2 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26B88798298CFDDB00A24428 /* Home.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B88797298CFDDB00A24428 /* Home.docc */; };
 		26B88799298CFDDB00A24428 /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B88796298CFDDB00A24428 /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B887F7298CFF8500A24428 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887F6298CFF8500A24428 /* Core.framework */; };
-		26B887F8298CFF8500A24428 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887F6298CFF8500A24428 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		786831848B05130DA7A49C0D /* Pods_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FDB523626F5FDE2A7EF308 /* Pods_Home.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,8 +34,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				26B887F8298CFF8500A24428 /* Core.framework in Embed Frameworks */,
 				18F3BB65298E03F700EBA6D2 /* Shared.framework in Embed Frameworks */,
+				1806A331298F326100EDCF61 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1806A32F298F326100EDCF61 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		183528B8298E06CF00A425FE /* AnimeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeMapper.swift; sourceTree = "<group>"; };
 		183528C1298E07C100A425FE /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		183528D5298E0B8900A425FE /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
@@ -70,8 +71,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				786831848B05130DA7A49C0D /* Pods_Home.framework in Frameworks */,
+				1806A330298F326100EDCF61 /* Core.framework in Frameworks */,
 				18F3BB64298E03F700EBA6D2 /* Shared.framework in Frameworks */,
-				26B887F7298CFF8500A24428 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +210,7 @@
 		6F0ABCDC22E9B83E7D00B5A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1806A32F298F326100EDCF61 /* Core.framework */,
 				18F3BB63298E03F700EBA6D2 /* Shared.framework */,
 				26B887F6298CFF8500A24428 /* Core.framework */,
 				E0FDB523626F5FDE2A7EF308 /* Pods_Home.framework */,
