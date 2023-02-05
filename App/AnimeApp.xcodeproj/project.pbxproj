@@ -52,8 +52,8 @@
 		2663447C2983D0DF00C8F0E0 /* AnimeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = AnimeApp/Router/App/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		266344812983D0DF00C8F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = AnimeApp/Router/App/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
-		266344882983D0E000C8F0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2663448D2983D0E000C8F0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		266344882983D0E000C8F0E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "AnimeApp/Support File/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		2663448D2983D0E000C8F0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "AnimeApp/Support File/Info.plist"; sourceTree = SOURCE_ROOT; };
 		26B886DE298CF00500A24428 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887E1298CFEEF00A24428 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887E5298CFEF400A24428 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
