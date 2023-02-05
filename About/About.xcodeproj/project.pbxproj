@@ -11,24 +11,8 @@
 		18826622298D2CE5004BACF0 /* AboutModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18826620298D2CE4004BACF0 /* AboutModuleBuilder.swift */; };
 		26B887DA298CFE6F00A24428 /* About.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B887D9298CFE6F00A24428 /* About.docc */; };
 		26B887DB298CFE6F00A24428 /* About.h in Headers */ = {isa = PBXBuildFile; fileRef = 26B887D8298CFE6F00A24428 /* About.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26B88803298CFF9E00A24428 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B88802298CFF9E00A24428 /* Core.framework */; };
-		26B88804298CFF9E00A24428 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B88802298CFF9E00A24428 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB52491B06908BAAE28D0C22 /* Pods_About.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B48F63F7D467A40711B8E61 /* Pods_About.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		26B88805298CFF9E00A24428 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				26B88804298CFF9E00A24428 /* Core.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		024407938BE6875FB899302F /* Pods-About.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-About.debug.xcconfig"; path = "Target Support Files/Pods-About/Pods-About.debug.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +32,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB52491B06908BAAE28D0C22 /* Pods_About.framework in Frameworks */,
-				26B88803298CFF9E00A24428 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +109,6 @@
 				26B887D1298CFE6F00A24428 /* Sources */,
 				26B887D2298CFE6F00A24428 /* Frameworks */,
 				26B887D3298CFE6F00A24428 /* Resources */,
-				26B88805298CFF9E00A24428 /* Embed Frameworks */,
 				18826656298D311D004BACF0 /* ShellScript */,
 			);
 			buildRules = (
