@@ -13,15 +13,7 @@ workflows:
           pod install --repo-update --project-directory=App/
       - name: Build debug app
         script: |
-          xcode-project build-ipa \
-           --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
-           --scheme "$XCODE_SCHEME"
-           --export-options-plist: "/Users/builder/export_options.plist"
-    artifacts:
-      - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+          xcodebuild build -workspace "$XCODE_WORKSPACE" -scheme "XCODE_SCHEME" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
       email:
         recipients:
