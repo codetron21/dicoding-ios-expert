@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		182CF38C2984CF2D00AA4142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182CF38B2984CF2D00AA4142 /* LaunchScreen.storyboard */; };
 		182CF3952984D33400AA4142 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 182CF3942984D33400AA4142 /* .swiftlint.yml */; };
-		187A0631298FD1AF00888072 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A0630298FD1AF00888072 /* AppRouter.swift */; };
+		187A0632298FD5DC00888072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
+		187A0633298FD5DC00888072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
+		187A0634298FD5E200888072 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A0630298FD1AF00888072 /* AppRouter.swift */; };
 		18826672298DCB2E004BACF0 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18826671298DCB2E004BACF0 /* Shared.framework */; };
 		18826673298DCB2E004BACF0 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18826671298DCB2E004BACF0 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2663447F2983D0DF00C8F0E0 /* AppDelegate.swift */; };
-		266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266344812983D0DF00C8F0E0 /* SceneDelegate.swift */; };
 		266344892983D0E000C8F0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 266344882983D0E000C8F0E0 /* Assets.xcassets */; };
 		26B887E2298CFEEF00A24428 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887E1298CFEEF00A24428 /* Home.framework */; };
 		26B887E3298CFEEF00A24428 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26B887E1298CFEEF00A24428 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -104,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				182CF38A2984CF1C00AA4142 /* Splash */,
-				187A0630298FD1AF00888072 /* AppRouter.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -120,6 +119,7 @@
 		187A062F298FD1A300888072 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				187A0630298FD1AF00888072 /* AppRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -294,9 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				266344802983D0DF00C8F0E0 /* AppDelegate.swift in Sources */,
-				266344822983D0DF00C8F0E0 /* SceneDelegate.swift in Sources */,
-				187A0631298FD1AF00888072 /* AppRouter.swift in Sources */,
+				187A0634298FD5E200888072 /* AppRouter.swift in Sources */,
+				187A0632298FD5DC00888072 /* AppDelegate.swift in Sources */,
+				187A0633298FD5DC00888072 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
