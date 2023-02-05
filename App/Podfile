@@ -1,11 +1,17 @@
+source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/codetron21/Modularization-CorePodSpecs-Module.git'
-
+ 
 platform :ios, '13.0'
 
+use_frameworks!:linkage => :static
 inhibit_all_warnings!
 workspace 'AnimeApp'
 
 pod 'SwiftLint'
+
+def core_pods
+  pod 'Core'
+end
 
 def view_pods
   pod 'SDWebImage'
@@ -22,32 +28,26 @@ end
 
 target 'AnimeApp' do
   project './AnimeApp'
-  use_frameworks!:linkage => :static
 end
 
 target 'About' do
   project '../About/About'
-  use_frameworks!:linkage => :static
 end
 
 target 'Shared' do
   project '../Shared/Shared'
-  use_frameworks!:linkage => :static
 end
 
 target 'Home' do
   project '../Home/Home'
   view_pods
   network_pods
-  pod 'Core', '5.0.0'
-  use_frameworks!:linkage => :static
-
+  core_pods
 end
 
 abstract_target 'Locale' do
   local_pods
-  pod 'Core', '5.0.0'
-  use_frameworks!:linkage => :static
+  core_pods
 
   target 'Favorite' do
     project '../Favorite/Favorite'
