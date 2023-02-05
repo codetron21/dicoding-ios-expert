@@ -3,7 +3,6 @@ source 'https://github.com/codetron21/Modularization-CorePodSpecs-Module.git'
 platform :ios, '13.0'
 
 inhibit_all_warnings!
-use_frameworks!:linkage => :static
 workspace 'AnimeApp'
 
 pod 'SwiftLint'
@@ -23,14 +22,17 @@ end
 
 target 'AnimeApp' do
   project './AnimeApp'
+  use_frameworks!
 end
 
 target 'About' do
   project '../About/About'
+  use_frameworks!
 end
 
 target 'Shared' do
   project '../Shared/Shared'
+  use_frameworks!
 end
 
 target 'Home' do
@@ -38,11 +40,13 @@ target 'Home' do
   view_pods
   network_pods
   pod 'Core', '4.0.0'
+  use_frameworks!
 end
 
 abstract_target 'Locale' do
   local_pods
   pod 'Core', '4.0.0'
+  use_frameworks!
 
   target 'Favorite' do
     project '../Favorite/Favorite'
