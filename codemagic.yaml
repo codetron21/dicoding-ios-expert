@@ -5,7 +5,7 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
-        XCODE_WORKSPACE: "./App/AnimeApp.xcworkspace" # Isikan nama project Anda.
+        XCODE_WORKSPACE: "App/AnimeApp.xcworkspace" # Isikan nama project Anda.
         XCODE_SCHEME: "AnimeApp" # Isikan nama scheme project Anda.
     scripts:
       - name: Install pods
@@ -14,11 +14,13 @@ workflows:
       - name: Build debug app
         script: |
           xcode-project build-ipa \
-           --workspace "$XCODE_WORKSPACE" \
+           --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
            --scheme "$XCODE_SCHEME"
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
       email:
         recipients:
