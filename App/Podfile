@@ -22,31 +22,32 @@ end
 
 target 'AnimeApp' do
   project './AnimeApp'
-  use_frameworks!
+  use_frameworks!:linkage => :static
 end
 
 target 'About' do
   project '../About/About'
-  use_frameworks!
+  use_frameworks!:linkage => :static
 end
 
 target 'Shared' do
   project '../Shared/Shared'
-  use_frameworks!
+  use_frameworks!:linkage => :static
 end
 
 target 'Home' do
   project '../Home/Home'
   view_pods
   network_pods
-  pod 'Core', '4.0.0'
-  use_frameworks!
+  pod 'Core', '5.0.0'
+  use_frameworks!:linkage => :static
+
 end
 
 abstract_target 'Locale' do
   local_pods
-  pod 'Core', '4.0.0'
-  use_frameworks!
+  pod 'Core', '5.0.0'
+  use_frameworks!:linkage => :static
 
   target 'Favorite' do
     project '../Favorite/Favorite'
