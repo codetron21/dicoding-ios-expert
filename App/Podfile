@@ -35,14 +35,14 @@ end
 
 target 'Home' do
   project '../Home/Home'
-  pod 'Core', '3.0.0'
   view_pods
   network_pods
+  pod 'Core', '4.0.0'
 end
 
 abstract_target 'Locale' do
   local_pods
-  pod 'Core', '3.0.0'
+  pod 'Core', '4.0.0'
 
   target 'Favorite' do
     project '../Favorite/Favorite'
