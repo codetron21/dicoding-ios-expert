@@ -13,12 +13,12 @@
 		183528DA298E0BB400A425FE /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528D9298E0BB400A425FE /* RemoteDataSource.swift */; };
 		183528DE298E0C4B00A425FE /* DetailAnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528DD298E0C4B00A425FE /* DetailAnimeResponse.swift */; };
 		183528EA298E138900A425FE /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528E9298E138900A425FE /* LocaleDataSource.swift */; };
-		1882667D298DD46D004BACF0 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882667C298DD46D004BACF0 /* DetailInteractor.swift */; };
+		187A062A298FC61700888072 /* DetailAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A0629298FC61700888072 /* DetailAnimeModel.swift */; };
+		187A062E298FC64D00888072 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A062D298FC64D00888072 /* DetailInteractor.swift */; };
 		18826681298DD47B004BACF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882667E298DD47B004BACF0 /* DetailViewController.swift */; };
 		18826682298DD47B004BACF0 /* DetailModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882667F298DD47B004BACF0 /* DetailModuleBuilder.swift */; };
 		18826683298DD47B004BACF0 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18826680298DD47B004BACF0 /* DetailPresenter.swift */; };
 		18826690298DD840004BACF0 /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882668F298DD840004BACF0 /* AnimeRepository.swift */; };
-		18F3BB5A298DFF5D00EBA6D2 /* DetailAnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3BB59298DFF5D00EBA6D2 /* DetailAnimeModel.swift */; };
 		18F3BB6A298E041300EBA6D2 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB69298E041300EBA6D2 /* Shared.framework */; };
 		18F3BB6B298E041300EBA6D2 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3BB69298E041300EBA6D2 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26B887AE298CFE0700A24428 /* Detail.docc in Sources */ = {isa = PBXBuildFile; fileRef = 26B887AD298CFE0700A24428 /* Detail.docc */; };
@@ -49,12 +49,12 @@
 		183528DD298E0C4B00A425FE /* DetailAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeResponse.swift; sourceTree = "<group>"; };
 		183528E9298E138900A425FE /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		187A061C298FBCF500888072 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1882667C298DD46D004BACF0 /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		187A0629298FC61700888072 /* DetailAnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnimeModel.swift; sourceTree = "<group>"; };
+		187A062D298FC64D00888072 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		1882667E298DD47B004BACF0 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1882667F298DD47B004BACF0 /* DetailModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleBuilder.swift; sourceTree = "<group>"; };
 		18826680298DD47B004BACF0 /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		1882668F298DD840004BACF0 /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
-		18F3BB59298DFF5D00EBA6D2 /* DetailAnimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAnimeModel.swift; sourceTree = "<group>"; };
 		18F3BB69298E041300EBA6D2 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887A9298CFE0700A24428 /* Detail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Detail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B887AC298CFE0700A24428 /* Detail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Detail.h; sourceTree = "<group>"; };
@@ -122,6 +122,31 @@
 			path = Locale;
 			sourceTree = "<group>";
 		};
+		187A0628298FC60500888072 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187A0629298FC61700888072 /* DetailAnimeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187A062B298FC62D00888072 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				187A0628298FC60500888072 /* Model */,
+				187A062C298FC63300888072 /* Use Case */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		187A062C298FC63300888072 /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				187A062D298FC64D00888072 /* DetailInteractor.swift */,
+			);
+			path = "Use Case";
+			sourceTree = "<group>";
+		};
 		18826674298DCF2E004BACF0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,32 +155,6 @@
 				1882667E298DD47B004BACF0 /* DetailViewController.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		18826676298DCF42004BACF0 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				18826684298DD488004BACF0 /* Model */,
-				1882667B298DD437004BACF0 /* Use Case */,
-			);
-			name = Domain;
-			path = "/Users/apple/Documents/dicoding/ios-expert/dicoding-ios-expert/Detail/Detail/Domain";
-			sourceTree = "<absolute>";
-		};
-		1882667B298DD437004BACF0 /* Use Case */ = {
-			isa = PBXGroup;
-			children = (
-				1882667C298DD46D004BACF0 /* DetailInteractor.swift */,
-			);
-			path = "Use Case";
-			sourceTree = "<group>";
-		};
-		18826684298DD488004BACF0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				18F3BB59298DFF5D00EBA6D2 /* DetailAnimeModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1882668C298DD578004BACF0 /* Data */ = {
@@ -205,10 +204,10 @@
 		26B887AB298CFE0700A24428 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				187A062B298FC62D00888072 /* Domain */,
 				18826692298DD881004BACF0 /* Utils */,
 				18826691298DD87A004BACF0 /* DI */,
 				1882668C298DD578004BACF0 /* Data */,
-				18826676298DCF42004BACF0 /* Domain */,
 				18826674298DCF2E004BACF0 /* Presentation */,
 				26B887AC298CFE0700A24428 /* Detail.h */,
 				26B887AD298CFE0700A24428 /* Detail.docc */,
@@ -373,11 +372,11 @@
 				18826690298DD840004BACF0 /* AnimeRepository.swift in Sources */,
 				18826683298DD47B004BACF0 /* DetailPresenter.swift in Sources */,
 				183528DA298E0BB400A425FE /* RemoteDataSource.swift in Sources */,
+				187A062E298FC64D00888072 /* DetailInteractor.swift in Sources */,
 				183528BE298E079900A425FE /* Injection.swift in Sources */,
 				18298B81298E76650079C434 /* AnimeEntity.swift in Sources */,
+				187A062A298FC61700888072 /* DetailAnimeModel.swift in Sources */,
 				183528DE298E0C4B00A425FE /* DetailAnimeResponse.swift in Sources */,
-				1882667D298DD46D004BACF0 /* DetailInteractor.swift in Sources */,
-				18F3BB5A298DFF5D00EBA6D2 /* DetailAnimeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
