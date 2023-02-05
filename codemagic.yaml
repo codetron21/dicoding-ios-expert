@@ -10,7 +10,7 @@ workflows:
     scripts:
       - name: Install pods
         script: |
-          pod install --project-directory=App/
+          pod install --repo-update --project-directory=App/
       - name: Build debug app
         script: |
           xcode-project build-ipa \
