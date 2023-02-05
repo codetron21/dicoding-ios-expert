@@ -10,7 +10,8 @@ workflows:
     scripts:
       - name: Install pods
         script: |
-          pod install --repo-update --project-directory=App/
+          cd App
+          pod install --repo-update
       - name: Build debug app
         script: |
           xcodebuild build -workspace "$XCODE_WORKSPACE" \

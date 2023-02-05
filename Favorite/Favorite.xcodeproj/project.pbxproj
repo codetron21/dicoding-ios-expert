@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1806A336298F328300EDCF61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A335298F328300EDCF61 /* Core.framework */; };
-		1806A337298F328300EDCF61 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A335298F328300EDCF61 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18298B87298E7FC10079C434 /* Detail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; };
 		18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18298B86298E7FC10079C434 /* Detail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183528BC298E06F700A425FE /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528BB298E06F700A425FE /* AnimeMapper.swift */; };
@@ -36,7 +34,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				18F3BB68298E040700EBA6D2 /* Shared.framework in Embed Frameworks */,
-				1806A337298F328300EDCF61 /* Core.framework in Embed Frameworks */,
 				18298B88298E7FC10079C434 /* Detail.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +49,8 @@
 		183528BF298E07AE00A425FE /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		183528CF298E0B2300A425FE /* LocaleDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleDataSource.swift; sourceTree = "<group>"; };
 		183528D1298E0B6100A425FE /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
+		187A061F298FBD0400888072 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		187A0625298FBE5A00888072 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F3BB49298DFE1D00EBA6D2 /* FavoritePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritePresenter.swift; path = Presentation/FavoritePresenter.swift; sourceTree = "<group>"; };
 		18F3BB4A298DFE1D00EBA6D2 /* AnimeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimeItemCell.swift; path = Presentation/AnimeItemCell.swift; sourceTree = "<group>"; };
 		18F3BB4B298DFE1D00EBA6D2 /* FavoriteModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteModuleBuilder.swift; path = Presentation/FavoriteModuleBuilder.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 				18F3BB67298E040700EBA6D2 /* Shared.framework in Frameworks */,
 				18298B87298E7FC10079C434 /* Detail.framework in Frameworks */,
 				D54963C6F0664A16563AFBC2 /* Pods_Locale_Favorite.framework in Frameworks */,
-				1806A336298F328300EDCF61 /* Core.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +206,8 @@
 		EB43DF88AEA38A8FBFBC3B6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187A0625298FBE5A00888072 /* Core.framework */,
+				187A061F298FBD0400888072 /* Core.framework */,
 				1806A335298F328300EDCF61 /* Core.framework */,
 				18298B86298E7FC10079C434 /* Detail.framework */,
 				18F3BB66298E040700EBA6D2 /* Shared.framework */,
@@ -491,6 +491,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,9 +501,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codetron.Favorite;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -519,6 +523,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,9 +533,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codetron.Favorite;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

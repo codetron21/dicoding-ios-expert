@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1806A330298F326100EDCF61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A32F298F326100EDCF61 /* Core.framework */; };
-		1806A331298F326100EDCF61 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1806A32F298F326100EDCF61 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		183528B9298E06CF00A425FE /* AnimeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528B8298E06CF00A425FE /* AnimeMapper.swift */; };
 		183528C2298E07C100A425FE /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528C1298E07C100A425FE /* Injection.swift */; };
 		183528D6298E0B8900A425FE /* AnimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183528D5298E0B8900A425FE /* AnimeRepository.swift */; };
@@ -35,7 +33,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				18F3BB65298E03F700EBA6D2 /* Shared.framework in Embed Frameworks */,
-				1806A331298F326100EDCF61 /* Core.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +46,8 @@
 		183528D5298E0B8900A425FE /* AnimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRepository.swift; sourceTree = "<group>"; };
 		183528DB298E0BCF00A425FE /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		183528DF298E0C8C00A425FE /* ItemAnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemAnimeResponse.swift; sourceTree = "<group>"; };
+		186694CE298F966E002AF019 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		187A0622298FBD2B00888072 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18826623298D2F6B004BACF0 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		18826624298D2F6C004BACF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18826625298D2F6C004BACF0 /* HomeModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleBuilder.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				786831848B05130DA7A49C0D /* Pods_Home.framework in Frameworks */,
-				1806A330298F326100EDCF61 /* Core.framework in Frameworks */,
 				18F3BB64298E03F700EBA6D2 /* Shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +208,8 @@
 		6F0ABCDC22E9B83E7D00B5A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187A0622298FBD2B00888072 /* Core.framework */,
+				186694CE298F966E002AF019 /* Core.framework */,
 				1806A32F298F326100EDCF61 /* Core.framework */,
 				18F3BB63298E03F700EBA6D2 /* Shared.framework */,
 				26B887F6298CFF8500A24428 /* Core.framework */,
@@ -494,6 +494,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,9 +504,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codetron.Home;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -522,6 +526,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -531,9 +536,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.codetron.Home;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
