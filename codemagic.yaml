@@ -1,8 +1,8 @@
 workflows:
   ios-project-debug: # workflow ID
-    name: iOS debug # workflow name
+    name: Anime app debug # workflow name
     environment:
-      xcode: latest
+      xcode: 14.2
       cocoapods: default
       vars:
         XCODE_WORKSPACE: "App/AnimeApp.xcworkspace" # Isikan nama project Anda.
