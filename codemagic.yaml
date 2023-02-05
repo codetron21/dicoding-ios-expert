@@ -8,6 +8,9 @@ workflows:
         XCODE_WORKSPACE: "./App/AnimeApp.xcworkspace" # Isikan nama project Anda.
         XCODE_SCHEME: "AnimeApp" # Isikan nama scheme project Anda.
     scripts:
+      - name: Install pods
+        script: |
+          pod install
       - name: Build debug app
         script: |
           xcode-project build-ipa \
